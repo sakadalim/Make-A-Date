@@ -10,7 +10,7 @@
 		1C39B48EC8C5707DDC02A485 /* Pods_Make_A_Date.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C917D73C0FAC20F16F5CAD74 /* Pods_Make_A_Date.framework */; };
 		840409A320631CB40043973A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840409A220631CB40043973A /* AppDelegate.swift */; };
 		840409A520631CB40043973A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840409A420631CB40043973A /* ViewController.swift */; };
-		840409A820631CB40043973A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840409A620631CB40043973A /* Main.storyboard */; };
+		840409A820631CB40043973A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840409A620631CB40043973A /* Login.storyboard */; };
 		840409AB20631CB40043973A /* Make_A_Date.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 840409A920631CB40043973A /* Make_A_Date.xcdatamodeld */; };
 		840409AD20631CB40043973A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840409AC20631CB40043973A /* Assets.xcassets */; };
 		840409B020631CB40043973A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840409AE20631CB40043973A /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 		8404099F20631CB40043973A /* Make A Date.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Make A Date.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		840409A220631CB40043973A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		840409A420631CB40043973A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		840409A720631CB40043973A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		840409A720631CB40043973A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		840409AA20631CB40043973A /* Make_A_Date.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Make_A_Date.xcdatamodel; sourceTree = "<group>"; };
 		840409AC20631CB40043973A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		840409AF20631CB40043973A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,16 +82,64 @@
 		840409A120631CB40043973A /* Make A Date */ = {
 			isa = PBXGroup;
 			children = (
+				849E5995206AC902000D252A /* Views */,
+				849E5994206AC8FC000D252A /* Services */,
+				849E5993206AC8F0000D252A /* SupportingFiles */,
+				849E5992206AC8DF000D252A /* ViewControllers */,
+				849E5991206AC8D4000D252A /* Models */,
+				849E5990206AC8C0000D252A /* Storyboards */,
 				840409A220631CB40043973A /* AppDelegate.swift */,
-				848BB73220635B1D00AB437F /* awsconfiguration.json */,
-				840409A420631CB40043973A /* ViewController.swift */,
-				840409A620631CB40043973A /* Main.storyboard */,
 				840409AC20631CB40043973A /* Assets.xcassets */,
-				840409AE20631CB40043973A /* LaunchScreen.storyboard */,
-				840409B120631CB40043973A /* Info.plist */,
 				840409A920631CB40043973A /* Make_A_Date.xcdatamodeld */,
 			);
 			path = "Make A Date";
+			sourceTree = "<group>";
+		};
+		849E5990206AC8C0000D252A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				840409A620631CB40043973A /* Login.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		849E5991206AC8D4000D252A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		849E5992206AC8DF000D252A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				840409A420631CB40043973A /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		849E5993206AC8F0000D252A /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				848BB73220635B1D00AB437F /* awsconfiguration.json */,
+				840409AE20631CB40043973A /* LaunchScreen.storyboard */,
+				840409B120631CB40043973A /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		849E5994206AC8FC000D252A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		849E5995206AC902000D252A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,7 +207,7 @@
 				848BB73320635B1D00AB437F /* awsconfiguration.json in Resources */,
 				840409B020631CB40043973A /* LaunchScreen.storyboard in Resources */,
 				840409AD20631CB40043973A /* Assets.xcassets in Resources */,
-				840409A820631CB40043973A /* Main.storyboard in Resources */,
+				840409A820631CB40043973A /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,12 +285,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		840409A620631CB40043973A /* Main.storyboard */ = {
+		840409A620631CB40043973A /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				840409A720631CB40043973A /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		840409AE20631CB40043973A /* LaunchScreen.storyboard */ = {
