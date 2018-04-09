@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C4949AE7790550286ACEC309B59E4BED"
+               BlueprintIdentifier = "3B868EB4E2AC1F0FF22199C5380C5DC8"
                BuildableName = "Pods_Make_A_Date.framework"
                BlueprintName = "Pods-Make A Date"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -37,7 +36,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C4949AE7790550286ACEC309B59E4BED"
+            BlueprintIdentifier = "3B868EB4E2AC1F0FF22199C5380C5DC8"
             BuildableName = "Pods_Make_A_Date.framework"
             BlueprintName = "Pods-Make A Date"
             ReferencedContainer = "container:Pods.xcodeproj">

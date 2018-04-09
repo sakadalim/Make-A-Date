@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		1C39B48EC8C5707DDC02A485 /* Pods_Make_A_Date.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C917D73C0FAC20F16F5CAD74 /* Pods_Make_A_Date.framework */; };
 		840409A320631CB40043973A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840409A220631CB40043973A /* AppDelegate.swift */; };
-		840409A520631CB40043973A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840409A420631CB40043973A /* ViewController.swift */; };
-		840409A820631CB40043973A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840409A620631CB40043973A /* Login.storyboard */; };
+		840409A520631CB40043973A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840409A420631CB40043973A /* MainViewController.swift */; };
+		840409A820631CB40043973A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840409A620631CB40043973A /* Main.storyboard */; };
 		840409AB20631CB40043973A /* Make_A_Date.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 840409A920631CB40043973A /* Make_A_Date.xcdatamodeld */; };
 		840409AD20631CB40043973A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840409AC20631CB40043973A /* Assets.xcassets */; };
 		840409B020631CB40043973A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840409AE20631CB40043973A /* LaunchScreen.storyboard */; };
+		84596F24207BF6620012E651 /* System Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84596F23207BF6620012E651 /* System Extension.swift */; };
 		848BB73320635B1D00AB437F /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 848BB73220635B1D00AB437F /* awsconfiguration.json */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +22,13 @@
 		553533101816C301A4794ED3 /* Pods-Make A Date.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Make A Date.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Make A Date/Pods-Make A Date.debug.xcconfig"; sourceTree = "<group>"; };
 		8404099F20631CB40043973A /* Make A Date.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Make A Date.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		840409A220631CB40043973A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		840409A420631CB40043973A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		840409A720631CB40043973A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		840409A420631CB40043973A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		840409A720631CB40043973A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		840409AA20631CB40043973A /* Make_A_Date.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Make_A_Date.xcdatamodel; sourceTree = "<group>"; };
 		840409AC20631CB40043973A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		840409AF20631CB40043973A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		840409B120631CB40043973A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84596F23207BF6620012E651 /* System Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "System Extension.swift"; sourceTree = "<group>"; };
 		848BB73220635B1D00AB437F /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		95CD5F2FB3F5591AC56530A1 /* Pods-Make A Date.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Make A Date.release.xcconfig"; path = "Pods/Target Support Files/Pods-Make A Date/Pods-Make A Date.release.xcconfig"; sourceTree = "<group>"; };
 		C917D73C0FAC20F16F5CAD74 /* Pods_Make_A_Date.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Make_A_Date.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 		840409A120631CB40043973A /* Make A Date */ = {
 			isa = PBXGroup;
 			children = (
+				84596F22207BF6490012E651 /* Extensions + Helper */,
 				849E5995206AC902000D252A /* Views */,
 				849E5994206AC8FC000D252A /* Services */,
 				849E5993206AC8F0000D252A /* SupportingFiles */,
@@ -95,10 +98,18 @@
 			path = "Make A Date";
 			sourceTree = "<group>";
 		};
+		84596F22207BF6490012E651 /* Extensions + Helper */ = {
+			isa = PBXGroup;
+			children = (
+				84596F23207BF6620012E651 /* System Extension.swift */,
+			);
+			path = "Extensions + Helper";
+			sourceTree = "<group>";
+		};
 		849E5990206AC8C0000D252A /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				840409A620631CB40043973A /* Login.storyboard */,
+				840409A620631CB40043973A /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -113,7 +124,7 @@
 		849E5992206AC8DF000D252A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				840409A420631CB40043973A /* ViewController.swift */,
+				840409A420631CB40043973A /* MainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -207,7 +218,7 @@
 				848BB73320635B1D00AB437F /* awsconfiguration.json in Resources */,
 				840409B020631CB40043973A /* LaunchScreen.storyboard in Resources */,
 				840409AD20631CB40043973A /* Assets.xcassets in Resources */,
-				840409A820631CB40043973A /* Login.storyboard in Resources */,
+				840409A820631CB40043973A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,14 +248,24 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Make A Date/Pods-Make A Date-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSAuthUI/AWSAuthUI.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSPinpoint/AWSPinpoint.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthUI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSPinpoint.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSUserPoolsSignIn.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -276,21 +297,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840409A520631CB40043973A /* ViewController.swift in Sources */,
+				840409A520631CB40043973A /* MainViewController.swift in Sources */,
 				840409AB20631CB40043973A /* Make_A_Date.xcdatamodeld in Sources */,
 				840409A320631CB40043973A /* AppDelegate.swift in Sources */,
+				84596F24207BF6620012E651 /* System Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		840409A620631CB40043973A /* Login.storyboard */ = {
+		840409A620631CB40043973A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				840409A720631CB40043973A /* Base */,
 			);
-			name = Login.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		840409AE20631CB40043973A /* LaunchScreen.storyboard */ = {
@@ -418,7 +440,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 527W2P39VD;
-				INFOPLIST_FILE = "Make A Date/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Make A Date/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sakada.lim.Make-A-Date";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -434,7 +456,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 527W2P39VD;
-				INFOPLIST_FILE = "Make A Date/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Make A Date/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sakada.lim.Make-A-Date";
 				PRODUCT_NAME = "$(TARGET_NAME)";
