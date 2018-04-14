@@ -31,6 +31,7 @@ class ProfilePageViewController: UIViewController {
         let credentialsProvider = AWSMobileClient.sharedInstance().getCredentialsProvider()
         let identityId = AWSIdentityManager.default().identityId
         
+        disableEdit()
         setupDatePicker()
         
         if !AWSSignInManager.sharedInstance().isLoggedIn {
@@ -76,7 +77,21 @@ class ProfilePageViewController: UIViewController {
         })
     }
     
+    func enableEdit(){
+        fullNameTextField.isUserInteractionEnabled = true
+        dateOfBirthTextField.isUserInteractionEnabled = true
+        genderTextField.isUserInteractionEnabled = true
+        locationTextField.isUserInteractionEnabled = true
+        doneButton.isHidden = false
+    }
     
+    func disableEdit(){
+        fullNameTextField.isUserInteractionEnabled = false
+        dateOfBirthTextField.isUserInteractionEnabled = false
+        genderTextField.isUserInteractionEnabled = false
+        locationTextField.isUserInteractionEnabled = false
+        doneButton.isHidden = true
+    }
     
     @IBAction func didTapSettingButton(_ sender: Any) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -91,9 +106,13 @@ class ProfilePageViewController: UIViewController {
                 assert(false)
             }
         }
-        alertController.view.tintColor = UIColor.red
-        alertController.addAction(signOutAction)
         let cancelAction = UIAlertAction(title:"Cancel", style: .cancel, handler: nil)
+        let editAction = UIAlertAction(title:"Edit Profile", style: .default){_ in
+            self.enableEdit()
+        }
+        alertController.view.tintColor = UIColor.rose
+        alertController.addAction(editAction)
+        alertController.addAction(signOutAction)
         alertController.addAction(cancelAction)
         present(alertController, animated: true)
     }
