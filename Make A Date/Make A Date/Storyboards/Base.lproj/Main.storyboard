@@ -14,18 +14,48 @@
         <!--Item 2-->
         <scene sceneID="ssM-FF-zqF">
             <objects>
-                <viewController id="oFU-uh-SUi" sceneMemberID="viewController">
+                <viewController id="oFU-uh-SUi" customClass="EventPageViewController" customModule="Make_A_Date" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vuS-VF-drU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEd-Wx-f0D">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                <color key="backgroundColor" red="0.37254901959999998" green="0.058823529409999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6z-0Y-NsZ">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <color key="barTintColor" red="0.37254901959999998" green="0.058823529409999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Events" id="Jf9-vq-Cqg"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="31" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Dc-zA-VbX">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uEd-Wx-f0D" firstAttribute="leading" secondItem="vuS-VF-drU" secondAttribute="leading" id="2Im-Sc-DTt"/>
+                            <constraint firstItem="7Dc-zA-VbX" firstAttribute="leading" secondItem="gAA-ji-ytF" secondAttribute="leading" id="98y-zg-POm"/>
+                            <constraint firstItem="7Dc-zA-VbX" firstAttribute="top" secondItem="uEd-Wx-f0D" secondAttribute="bottom" id="ObL-fE-CDt"/>
+                            <constraint firstAttribute="trailing" secondItem="uEd-Wx-f0D" secondAttribute="trailing" id="SHE-ar-c68"/>
+                            <constraint firstItem="c6z-0Y-NsZ" firstAttribute="trailing" secondItem="gAA-ji-ytF" secondAttribute="trailing" id="ZVZ-nY-spy"/>
+                            <constraint firstItem="uEd-Wx-f0D" firstAttribute="bottom" secondItem="c6z-0Y-NsZ" secondAttribute="bottom" id="fWU-E1-Swk"/>
+                            <constraint firstItem="c6z-0Y-NsZ" firstAttribute="leading" secondItem="gAA-ji-ytF" secondAttribute="leading" id="h0v-Jy-ZYT"/>
+                            <constraint firstItem="gAA-ji-ytF" firstAttribute="bottom" secondItem="7Dc-zA-VbX" secondAttribute="bottom" id="mLc-aa-XPM"/>
+                            <constraint firstItem="c6z-0Y-NsZ" firstAttribute="top" secondItem="gAA-ji-ytF" secondAttribute="top" id="neM-2Q-koI"/>
+                            <constraint firstItem="uEd-Wx-f0D" firstAttribute="top" secondItem="vuS-VF-drU" secondAttribute="top" id="osa-bc-7Jk"/>
+                            <constraint firstItem="gAA-ji-ytF" firstAttribute="trailing" secondItem="7Dc-zA-VbX" secondAttribute="trailing" id="tTq-aw-w2c"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gAA-ji-ytF"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="f3A-Se-gcY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zIB-Rm-tLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-845" y="470"/>
+            <point key="canvasLocation" x="-845.60000000000002" y="469.95073891625617"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="dkO-ys-Jis">
