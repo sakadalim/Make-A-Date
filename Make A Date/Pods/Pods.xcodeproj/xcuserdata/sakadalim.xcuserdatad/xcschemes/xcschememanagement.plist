@@ -48,11 +48,8 @@
 		</dict>
 		<key>AWSDynamoDB.xcscheme</key>
 		<dict>
-<<<<<<< HEAD
 			<key>isShown</key>
 			<false/>
-=======
->>>>>>> UserQuestionnaire
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
@@ -86,15 +83,10 @@
 		</dict>
 		<key>LocationPicker.xcscheme</key>
 		<dict>
-<<<<<<< HEAD
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>11</integer>
-=======
-			<key>orderHint</key>
-			<integer>12</integer>
->>>>>>> UserQuestionnaire
 		</dict>
 		<key>Pods-Make A Date.xcscheme</key>
 		<dict>
