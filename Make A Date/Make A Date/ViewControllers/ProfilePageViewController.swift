@@ -52,6 +52,8 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
         disableEdit()
         updateTextFields()
         
+        
+        
     }
     
     func updateTextFields(){
