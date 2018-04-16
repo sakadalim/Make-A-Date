@@ -36,20 +36,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LgS-48-z1I">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="132"/>
                                 <color key="backgroundColor" red="0.54117647059999996" green="0.31372549020000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzA-Dp-rUT">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.53333333333333333" green="0.31764705882352939" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" red="0.54117647059999996" green="0.31372549020000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Profile" id="0Mw-wn-THy">
-                                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear_white" id="srP-y7-erD">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear_white" style="plain" id="srP-y7-erD">
                                             <inset key="imageInsets" minX="0.0" minY="0.0" maxX="-12" maxY="-12"/>
-                                            <color key="tintColor" red="1" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="tintColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="didTapSettingButton:" destination="0It-dE-Gge" id="wxK-Ou-C5T"/>
                                             </connections>
@@ -58,10 +59,10 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4g-u5-koc">
-                                <rect key="frame" x="0.0" y="87.999999999999986" width="375" height="182.66666666666663"/>
+                                <rect key="frame" x="0.0" y="132" width="375" height="138.66666666666663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbI-mz-gD0">
-                                        <rect key="frame" x="133.33333333333334" y="60.333333333333343" width="109.66666666666666" height="62.333333333333343"/>
+                                        <rect key="frame" x="133.33333333333334" y="38.333333333333343" width="109.66666666666666" height="62.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="52"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -200,6 +201,9 @@
                                 <state key="normal" title="Done">
                                     <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapDoneButton:" destination="0It-dE-Gge" eventType="touchUpInside" id="7eN-lC-n85"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -230,17 +234,35 @@
                         <outlet property="fullNameTextField" destination="pnR-U6-Qma" id="Ru5-j0-aCU"/>
                         <outlet property="genderTextField" destination="tyt-pk-p1P" id="oey-Eh-09b"/>
                         <outlet property="locationTextField" destination="tAM-9I-ddc" id="sUV-Bp-ybN"/>
+                        <segue destination="JEh-wp-bLI" kind="show" identifier="toLocationPicker" id="JJY-VO-mgU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QpE-ju-Urx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-845.60000000000002" y="-194.75262368815595"/>
         </scene>
+        <!--Location Picker View Controller-->
+        <scene sceneID="RK2-XS-niK">
+            <objects>
+                <viewController id="JEh-wp-bLI" customClass="LocationPickerViewController" customModule="Make_A_Date" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hzc-ls-Xgs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mau-7j-KMR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tUq-Z2-Kzs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O9b-uJ-5Jh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55" y="-195"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="dVD-59-QGY">
             <objects>
-                <navigationController navigationBarHidden="YES" id="qqm-3o-fBz" sceneMemberID="viewController">
+                <navigationController id="qqm-3o-fBz" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ux0-hE-JWh">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
