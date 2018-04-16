@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C39B48EC8C5707DDC02A485 /* Pods_Make_A_Date.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C917D73C0FAC20F16F5CAD74 /* Pods_Make_A_Date.framework */; };
-		8393F0D12082766900BE0B28 /* userQuestionnaire.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8393F0D02082766900BE0B28 /* userQuestionnaire.storyboard */; };
+		8393F0D12082766900BE0B28 /* UserQuestionnaire.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8393F0D02082766900BE0B28 /* UserQuestionnaire.storyboard */; };
 		8393F0DB2082789C00BE0B28 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8393F0D42082789C00BE0B28 /* Model.swift */; };
 		8393F0DC2082789C00BE0B28 /* ViewModel04.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8393F0D52082789C00BE0B28 /* ViewModel04.swift */; };
 		8393F0DD2082789C00BE0B28 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8393F0D62082789C00BE0B28 /* CustomCell.swift */; };
@@ -29,12 +29,11 @@
 		840409AD20631CB40043973A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840409AC20631CB40043973A /* Assets.xcassets */; };
 		840409B020631CB40043973A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840409AE20631CB40043973A /* LaunchScreen.storyboard */; };
 		84596F24207BF6620012E651 /* System Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84596F23207BF6620012E651 /* System Extension.swift */; };
-		848BB73320635B1D00AB437F /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 848BB73220635B1D00AB437F /* awsconfiguration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		553533101816C301A4794ED3 /* Pods-Make A Date.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Make A Date.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Make A Date/Pods-Make A Date.debug.xcconfig"; sourceTree = "<group>"; };
-		8393F0D02082766900BE0B28 /* userQuestionnaire.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = userQuestionnaire.storyboard; sourceTree = "<group>"; };
+		8393F0D02082766900BE0B28 /* UserQuestionnaire.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserQuestionnaire.storyboard; sourceTree = "<group>"; };
 		8393F0D42082789C00BE0B28 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8393F0D52082789C00BE0B28 /* ViewModel04.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel04.swift; sourceTree = "<group>"; };
 		8393F0D62082789C00BE0B28 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
@@ -57,7 +56,6 @@
 		840409AF20631CB40043973A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		840409B120631CB40043973A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84596F23207BF6620012E651 /* System Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "System Extension.swift"; sourceTree = "<group>"; };
-		848BB73220635B1D00AB437F /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		95CD5F2FB3F5591AC56530A1 /* Pods-Make A Date.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Make A Date.release.xcconfig"; path = "Pods/Target Support Files/Pods-Make A Date/Pods-Make A Date.release.xcconfig"; sourceTree = "<group>"; };
 		C917D73C0FAC20F16F5CAD74 /* Pods_Make_A_Date.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Make_A_Date.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -164,7 +162,7 @@
 		849E5990206AC8C0000D252A /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				8393F0D02082766900BE0B28 /* userQuestionnaire.storyboard */,
+				8393F0D02082766900BE0B28 /* UserQuestionnaire.storyboard */,
 				840409A620631CB40043973A /* Main.storyboard */,
 			);
 			path = Storyboards;
@@ -189,7 +187,6 @@
 		849E5993206AC8F0000D252A /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				848BB73220635B1D00AB437F /* awsconfiguration.json */,
 				840409AE20631CB40043973A /* LaunchScreen.storyboard */,
 				840409B120631CB40043973A /* Info.plist */,
 			);
@@ -274,11 +271,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8393F0DF2082789C00BE0B28 /* CustomCell.xib in Resources */,
-				848BB73320635B1D00AB437F /* awsconfiguration.json in Resources */,
 				840409B020631CB40043973A /* LaunchScreen.storyboard in Resources */,
 				840409AD20631CB40043973A /* Assets.xcassets in Resources */,
 				840409A820631CB40043973A /* Main.storyboard in Resources */,
-				8393F0D12082766900BE0B28 /* userQuestionnaire.storyboard in Resources */,
+				8393F0D12082766900BE0B28 /* UserQuestionnaire.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
