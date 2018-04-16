@@ -193,9 +193,9 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
                 AWSSignInManager.sharedInstance().logout(completionHandler: {(result: Any?, error: Error?) in
                     self.navigationController!.popToRootViewController(animated: false)
                     self.presentAuthUIViewController()
+                    self.clearTextField()
                 })
                 UserProfile.currentProfile = nil
-                self.clearTextField()
             } else {
                 assert(false)
             }
