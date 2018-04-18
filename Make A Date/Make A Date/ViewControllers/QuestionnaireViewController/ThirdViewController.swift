@@ -15,7 +15,7 @@ class ThirdViewController : UIViewController {
     @IBOutlet weak var nextButton03: UIButton!
     
     var viewModel = ViewModel02()
-    var questionTesting = Questionnaire()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +49,7 @@ class ThirdViewController : UIViewController {
     }
     
     @IBAction func next_03(_ sender: Any) {
-//        print(viewModel.selectedItems.map { $0.title })
-        questionTesting.setQuestion_03(viewModel)
+        UserInterests.setQuestion3(viewModel.selectedItems.map{$0.title}[0])
         tableView03?.reloadData()
     }
 }

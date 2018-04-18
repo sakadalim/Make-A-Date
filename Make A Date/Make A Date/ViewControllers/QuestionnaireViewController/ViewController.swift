@@ -11,11 +11,11 @@ import UIKit
 class ViewController: UIViewController {
     
     var viewModel = ViewModel()
-    var questionTesting = Questionnaire()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nextButton: UIButton!
-
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,8 +45,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func next(_ sender: Any) {
-//        print(viewModel.selectedItems.map { $0.title })
-        questionTesting.setQuestion_01(viewModel)
+//        questionTesting.setQuestion_01(viewModel)
+        print(Set(viewModel.selectedItems.map{$0.title}))
+        UserInterests.setQuestion1(Set(viewModel.selectedItems.map{$0.title}))
         tableView?.reloadData()
     }
 }

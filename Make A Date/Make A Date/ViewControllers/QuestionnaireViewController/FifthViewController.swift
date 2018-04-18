@@ -15,7 +15,6 @@ class FifthViewController : UIViewController {
     @IBOutlet weak var doneButton: UIButton!
     
     var viewModel = ViewModel04()
-    var questionTesting = Questionnaire()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +48,7 @@ class FifthViewController : UIViewController {
     }
     
     @IBAction func done(_ sender: Any) {
-//        print(viewModel.selectedItems.map { $0.title })
-        questionTesting.setQuestion_05(viewModel)
+        UserInterests.setQuestion5(viewModel.selectedItems.map{$0.title}[0])
         tableView05?.reloadData()
     }
 }

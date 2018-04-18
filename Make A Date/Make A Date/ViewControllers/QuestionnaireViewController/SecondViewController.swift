@@ -15,7 +15,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var nextButton02: UIButton!
     
     var viewModel = ViewModel02()
-    var questionTesting = Questionnaire()
+
     
     
     override func viewDidLoad() {
@@ -51,8 +51,7 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func next(_ sender: Any) {
-//        print(viewModel.selectedItems.map { $0.title })
-        questionTesting.setQuestion_02(viewModel)
+        UserInterests.setQuestion2(viewModel.selectedItems.map{$0.title}[0])
         tableView02?.reloadData()
     }
     

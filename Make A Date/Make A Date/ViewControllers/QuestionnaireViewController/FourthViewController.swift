@@ -15,7 +15,6 @@ class FourthViewController : UIViewController {
     @IBOutlet weak var nextButton04: UIButton!
     
     var viewModel = ViewModel03()
-    var questionTesting = Questionnaire()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +48,7 @@ class FourthViewController : UIViewController {
     }
     
     @IBAction func next04(_ sender: Any) {
-//        print(viewModel.selectedItems.map { $0.title })
-        questionTesting.setQuestion_04(viewModel)
+        UserInterests.setQuestion4(viewModel.selectedItems.map{$0.title}[0])
         tableView04?.reloadData()
     }
 }
