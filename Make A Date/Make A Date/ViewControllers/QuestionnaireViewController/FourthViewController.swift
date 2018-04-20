@@ -36,16 +36,7 @@ class FourthViewController : UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let identifier = segue.identifier else { return }
-        
-        switch identifier {
-        case "Question_02":
-            print("Question 02 starts...")
-        default:
-            print("unexpected segue identifier")
-        }
-    }
+    
     
     @IBAction func next04(_ sender: Any) {
         UserInterests.setQuestion4(viewModel.selectedItems.map{$0.title}[0])

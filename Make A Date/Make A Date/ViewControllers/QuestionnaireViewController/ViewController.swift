@@ -39,10 +39,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let identifier = segue.identifier else { return }
-        print("Questionnaire starts...")
-    }
+    
     
     @IBAction func next(_ sender: Any) {
 //        questionTesting.setQuestion_01(viewModel)

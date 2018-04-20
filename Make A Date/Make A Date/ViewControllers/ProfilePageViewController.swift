@@ -50,10 +50,15 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
         setupDatePicker()
         setupGenderPicker()
         disableEdit()
-        updateTextFields()
+        NotificationCenter.default.addObserver(self, selector: #selector(getDataUpdate), name: NSNotification.Name(rawValue: userProfileDidUpdateNotification), object: nil)
         
-        
-        
+    }
+    
+    @objc private func getDataUpdate() {
+        DispatchQueue.main.async {
+            self.updateTextFields()
+        }
+
     }
     
     func updateTextFields(){
@@ -62,22 +67,6 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
             self.dateOfBirthTextField.text = (UserProfile.currentProfile?._dateOfBirth)!
             self.genderTextField.text = (UserProfile.currentProfile?._gender)!
             self.locationTextField.text = (UserProfile.currentProfile?._locationName)!
-        } else {
-            let dynamoDbObjectMapper = AWSDynamoDBObjectMapper.default()
-            dynamoDbObjectMapper.load(UserProfile.self, hashKey: AWSIdentityManager.default().identityId as Any, rangeKey:nil).continueWith { (task: AWSTask<AnyObject>!) -> Any? in
-                if let error = task.error as NSError? {
-                    print("The request failed. Error: \(error)", task)
-                } else if let  gotProfile = task.result as? UserProfile {
-                    print("Got INITIAL User Profile")
-                    UserProfile.currentProfile = gotProfile
-                    DispatchQueue.main.async {
-                       self.viewDidLoad()
-                    }
-                    return nil
-                }
-                print("USER NOT IN DB INITIAL")
-                return nil
-            }
         }
     }
 
@@ -206,7 +195,18 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
         let editAction = UIAlertAction(title:"Edit Profile", style: .default){_ in
             self.enableEdit()
         }
+        let changeInterestAction = UIAlertAction(title:"Update Interest", style: .default){_ in
+            // present interest storyboard here
+            let storyboard = UIStoryboard(name: "UserQuestionnaire", bundle: nil)
+            guard let userInterestViewController = storyboard.instantiateInitialViewController() else {
+                fatalError("Couldn't instantiate inital view controller for UserQuestionnaire storyboard.")
+            }
+            self.present(userInterestViewController, animated: true)
+            
+            
+        }
         alertController.view.tintColor = UIColor.rose
+        alertController.addAction(changeInterestAction)
         alertController.addAction(editAction)
         alertController.addAction(signOutAction)
         alertController.addAction(cancelAction)
@@ -215,10 +215,12 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
 
 }
 
-extension ProfilePageViewController: UITextFieldDelegate {
+extension ProfilePageViewController: UITextFieldDelegate{
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         performSegue(withIdentifier: "toLocationPicker", sender: self)
         return false
     }
+    
+    
     
 }

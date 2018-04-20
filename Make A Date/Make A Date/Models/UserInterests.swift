@@ -24,7 +24,7 @@ class UserInterests: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     var _question3: String?
     var _question4: String?
     var _question5: String?
-    
+    var makeNew = true
     private static var _current = UserInterests()
     
     static var current: UserInterests {
@@ -84,6 +84,7 @@ class UserInterests: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
             } else if let gotInterest = task.result as? UserInterests {
                 print("User Interests Downloaded Successfully")
                 _current = gotInterest
+                current.makeNew = false
                 return nil
             }
             print("User Interests not in DB")
@@ -132,5 +133,13 @@ class UserInterests: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
         current._question5 = ans
     }
     
+    class func printResult(){
+        // for testing purposes
+        print(current._question1)
+        print(current._question2)
+        print(current._question3)
+        print(current._question4)
+        print(current._question5)
+    }
     
 }

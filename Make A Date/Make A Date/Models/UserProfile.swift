@@ -16,6 +16,8 @@ import UIKit
 import AWSDynamoDB
 import AWSAuthCore
 
+let userProfileDidUpdateNotification = "userProfileDidUpdateNotification"
+
 @objcMembers
 class UserProfile: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     
@@ -26,7 +28,9 @@ class UserProfile: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     var _gender: String?
     var _locationName: String?
     var _updatedDate: NSNumber?
-
+    
+    var makeNew = true
+        
     static var currentProfile: UserProfile?
     
     class func dynamoDBTableName() -> String {
@@ -70,6 +74,7 @@ class UserProfile: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
             }
             print("New UserProfile successfully saved to DDB")
         })
+        
     }
     
     class func getUserProfile(){
@@ -78,8 +83,12 @@ class UserProfile: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
             if let error = task.error as NSError? {
                 print("The request failed. Error: \(error)", task)
             } else if let  gotProfile = task.result as? UserProfile {
+                
                 print("Got User Profile 2")
                 UserProfile.currentProfile = gotProfile
+                UserProfile.currentProfile?.makeNew = false
+                NotificationCenter.default.post(name:
+                    NSNotification.Name(rawValue: userProfileDidUpdateNotification), object: nil)
                 return nil
             }
             print("USER NOT IN DB")
