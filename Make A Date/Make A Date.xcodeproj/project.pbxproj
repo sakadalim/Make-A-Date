@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C39B48EC8C5707DDC02A485 /* Pods_Make_A_Date.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C917D73C0FAC20F16F5CAD74 /* Pods_Make_A_Date.framework */; };
+		2E2FC79520880C1100F665B9 /* SearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2FC79420880C1100F665B9 /* SearchResultsCell.swift */; };
 		33DAA25F2083C3E100ECFFE0 /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DAA25E2083C3E100ECFFE0 /* EventPageViewController.swift */; };
 		840409A320631CB40043973A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840409A220631CB40043973A /* AppDelegate.swift */; };
 		840409A520631CB40043973A /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840409A420631CB40043973A /* ProfilePageViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E2FC79420880C1100F665B9 /* SearchResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsCell.swift; sourceTree = "<group>"; };
 		33DAA25E2083C3E100ECFFE0 /* EventPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
 		553533101816C301A4794ED3 /* Pods-Make A Date.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Make A Date.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Make A Date/Pods-Make A Date.debug.xcconfig"; sourceTree = "<group>"; };
 		8404099F20631CB40043973A /* Make A Date.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Make A Date.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +98,7 @@
 				840409A220631CB40043973A /* AppDelegate.swift */,
 				840409AC20631CB40043973A /* Assets.xcassets */,
 				840409A920631CB40043973A /* Make_A_Date.xcdatamodeld */,
+				2E2FC79420880C1100F665B9 /* SearchResultsCell.swift */,
 			);
 			path = "Make A Date";
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E2FC79520880C1100F665B9 /* SearchResultsCell.swift in Sources */,
 				840409A520631CB40043973A /* ProfilePageViewController.swift in Sources */,
 				840409AB20631CB40043973A /* Make_A_Date.xcdatamodeld in Sources */,
 				840409A320631CB40043973A /* AppDelegate.swift in Sources */,

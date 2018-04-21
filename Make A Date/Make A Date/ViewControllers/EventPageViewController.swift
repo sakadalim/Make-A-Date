@@ -7,15 +7,26 @@
 //
 
 import UIKit
-
+import CoreLocation
 
 class EventPageViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var eventSearchBar: UISearchBar!
+    let locationManager = CLLocationManager()
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
+    override func viewDidLoad() {
+        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+        <#code#>
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // 1
         return 10
