@@ -41,12 +41,15 @@ class FifthViewController : UIViewController {
     @IBAction func done(_ sender: Any) {
         UserInterests.setQuestion5(viewModel.selectedItems.map{$0.title}[0])
         tableView05?.reloadData()
+        UserInterests.printResult()
+        
         if UserInterests.current.makeNew {
+            print("Create new user interest")
             UserInterests.createNewUserInterests()
         } else {
+            print("UPDATE user interest")
             UserInterests.updateUserInterests()
         }
-        
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
 }

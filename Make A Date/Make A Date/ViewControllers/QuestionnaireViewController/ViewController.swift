@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     @IBAction func next(_ sender: Any) {
 //        questionTesting.setQuestion_01(viewModel)
         print(Set(viewModel.selectedItems.map{$0.title}))
-        UserInterests.setQuestion1(Set(viewModel.selectedItems.map{$0.title}))
+        UserInterests.setQuestion1(viewModel.selectedItems.map{$0.title})
         tableView?.reloadData()
     }
 }

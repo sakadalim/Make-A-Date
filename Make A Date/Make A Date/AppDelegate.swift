@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             AWSPinpointConfiguration.defaultPinpointConfiguration(launchOptions: launchOptions))
         
         UserProfile.getUserProfile()
+        UserInterests.getUserInterest()
         
         return AWSMobileClient.sharedInstance().interceptApplication(
             application,

@@ -16,15 +16,18 @@ import UIKit
 import AWSDynamoDB
 import AWSAuthCore
 
+
+@objcMembers
 class UserInterests: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     
     var _userId: String?
-    var _question1: Set<String>?
+    var _question1: [String]?
     var _question2: String?
     var _question3: String?
     var _question4: String?
     var _question5: String?
     var makeNew = true
+    
     private static var _current = UserInterests()
     
     static var current: UserInterests {
@@ -60,11 +63,12 @@ class UserInterests: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
         let dynamoDbObjextMapper = AWSDynamoDBObjectMapper.default()
         let interest: UserInterests = UserInterests()
         interest._userId = AWSIdentityManager.default().identityId
-        interest._question1 = current._question1!
-        interest._question2 = current._question2!
-        interest._question3 = current._question3!
-        interest._question4 = current._question4!
-        interest._question5 = current._question5!
+        interest._question1 = current._question1
+        interest._question2 = current._question2
+        interest._question3 = current._question3
+        interest._question4 = current._question4
+        interest._question5 = current._question5
+        interest.makeNew = false
         
         dynamoDbObjextMapper.save(interest, completionHandler:{
             (error: Error?) -> Void in
@@ -101,6 +105,8 @@ class UserInterests: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
         interest._question3 = current._question3!
         interest._question4 = current._question4!
         interest._question5 = current._question5!
+        interest.makeNew = false
+        
         let updateMapperConfig = AWSDynamoDBObjectMapperConfiguration()
         updateMapperConfig.saveBehavior = .updateSkipNullAttributes
         dynamoDbObjectMapper.save(interest, configuration: updateMapperConfig, completionHandler: {(error: Error?) -> Void in
@@ -112,7 +118,7 @@ class UserInterests: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
         })
     }
     
-    class func setQuestion1(_ ans:Set<String>){
+    class func setQuestion1(_ ans:[String]){
         current._question1 = ans
         print("Data collected/set for question 1....")
     }
@@ -135,11 +141,11 @@ class UserInterests: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     
     class func printResult(){
         // for testing purposes
-        print(current._question1)
-        print(current._question2)
-        print(current._question3)
-        print(current._question4)
-        print(current._question5)
+        print(current._question1!)
+        print(current._question2!)
+        print(current._question3!)
+        print(current._question4!)
+        print(current._question5!)
     }
     
 }

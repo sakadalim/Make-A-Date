@@ -42,6 +42,8 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         navigationController?.setNavigationBarHidden(false, animated: false)
+        
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,11 +54,24 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
         disableEdit()
         NotificationCenter.default.addObserver(self, selector: #selector(getDataUpdate), name: NSNotification.Name(rawValue: userProfileDidUpdateNotification), object: nil)
         
+        
     }
     
     @objc private func getDataUpdate() {
-        DispatchQueue.main.async {
-            self.updateTextFields()
+        if UserProfile.currentProfile == nil {
+            let alert = UIAlertController(title: "Update Profile", message:"Please update your profile.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            let continueButton = UIAlertAction(title: "Continue", style: .default){ _ in
+                self.enableEdit()
+            }
+            // add the actions (buttons)
+            alert.addAction(continueButton)
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            DispatchQueue.main.async {
+                self.updateTextFields()
+            }
         }
 
     }
@@ -175,6 +190,24 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
             UserProfile.updateUserProfile(fullName: fullNameTextField.text!, dob: dateOfBirthTextField.text!, gender: genderTextField.text!, locationName: locationTextField.text!)
         }
         disableEdit()
+        if UserInterests.current.makeNew {
+            // create the alert
+            let alert = UIAlertController(title: "Tell Us Your Interests", message:"", preferredStyle: UIAlertControllerStyle.alert)
+            
+            let continueButton = UIAlertAction(title: "Continue", style: .default){ _ in
+                
+                let storyboard = UIStoryboard(name: "UserQuestionnaire", bundle: nil)
+                guard let userInterestViewController = storyboard.instantiateInitialViewController() else {
+                    fatalError("Couldn't instantiate inital view controller for UserQuestionnaire storyboard.")
+                }
+                self.present(userInterestViewController, animated: true)
+            }
+            // add the actions (buttons)
+            alert.addAction(continueButton)
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func didTapSettingButton(_ sender: Any) {
@@ -211,6 +244,10 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
         alertController.addAction(signOutAction)
         alertController.addAction(cancelAction)
         present(alertController, animated: true)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: userProfileDidUpdateNotification), object: self)
     }
 
 }
