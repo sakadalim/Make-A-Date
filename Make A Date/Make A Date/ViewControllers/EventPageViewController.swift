@@ -39,6 +39,11 @@ class EventPageViewController: UIViewController {
         
         return cell
     }
+  
+    @IBAction func callAPI(_ sender: Any) {
+        print("Calling API....")
+    }
+    
     
 }
 
