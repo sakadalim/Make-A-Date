@@ -81,7 +81,7 @@
     __block NSString *line = logMessage->_message;
 
     dispatch_sync(_queue, ^{
-        for (id<AWSDDLogFormatter> formatter in self->_formatters) {
+        for (id<AWSDDLogFormatter> formatter in _formatters) {
             AWSDDLogMessage *message = [self logMessageForLine:line originalMessage:logMessage];
             line = [formatter formatLogMessage:message];
 
@@ -107,7 +107,7 @@
     __block NSArray *formatters;
 
     dispatch_sync(_queue, ^{
-        formatters = [self->_formatters copy];
+        formatters = [_formatters copy];
     });
 
     return formatters;
@@ -115,19 +115,19 @@
 
 - (void)addFormatter:(id<AWSDDLogFormatter>)formatter {
     dispatch_barrier_async(_queue, ^{
-        [self->_formatters addObject:formatter];
+        [_formatters addObject:formatter];
     });
 }
 
 - (void)removeFormatter:(id<AWSDDLogFormatter>)formatter {
     dispatch_barrier_async(_queue, ^{
-        [self->_formatters removeObject:formatter];
+        [_formatters removeObject:formatter];
     });
 }
 
 - (void)removeAllFormatters {
     dispatch_barrier_async(_queue, ^{
-        [self->_formatters removeAllObjects];
+        [_formatters removeAllObjects];
     });
 }
 
@@ -135,7 +135,7 @@
     __block BOOL hasFormatter;
 
     dispatch_sync(_queue, ^{
-        hasFormatter = [self->_formatters containsObject:formatter];
+        hasFormatter = [_formatters containsObject:formatter];
     });
 
     return hasFormatter;
