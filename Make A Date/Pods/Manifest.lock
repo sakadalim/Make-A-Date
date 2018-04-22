@@ -23,6 +23,17 @@ DEPENDENCIES:
   - AWSPinpoint (~> 2.6.13)
   - AWSUserPoolsSignIn (~> 2.6.13)
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AWSAuthCore
+    - AWSAuthUI
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - AWSMobileClient
+    - AWSPinpoint
+    - AWSUserPoolsSignIn
+
 SPEC CHECKSUMS:
   AWSAuthCore: b13b0cb87abac6d44c52d8b965bbdb4cd0842017
   AWSAuthUI: 6c4b7eb77ff6f6f96a2a8661dc57cc840234dfbb
@@ -35,4 +46,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 2cf4b8a285645bd6b22b64703e2ee81eb5bb154a
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0

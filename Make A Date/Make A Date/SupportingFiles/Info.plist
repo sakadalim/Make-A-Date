@@ -41,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Program requires GPS to determine places near you, you must enable location to continue</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Program requires GPS to determine places near you, you must enable location to continue</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Program requires GPS to determine places near you, you must enable location to continue</string>
 </dict>
 </plist>

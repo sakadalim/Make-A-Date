@@ -11,6 +11,7 @@ import UIKit
 
 class SearchResultCell : UITableViewCell {
     
+    
     @IBOutlet weak var locationName: UILabel!
     @IBOutlet weak var locationCategory: UILabel!
     @IBOutlet weak var locationImage: UIImageView!
