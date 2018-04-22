@@ -8,6 +8,8 @@ target 'Make A Date' do
   pod 'AWSUserPoolsSignIn', '~> 2.6.13'
   pod 'AWSAuthUI', '~> 2.6.13'
   pod 'AWSPinpoint', '~> 2.6.13'
+  pod 'BDBOAuth1Manager'
+  pod 'AFNetworking', '~> 2.5'
 
   # Pods for Make A Date
 

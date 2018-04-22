@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1C39B48EC8C5707DDC02A485 /* Pods_Make_A_Date.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C917D73C0FAC20F16F5CAD74 /* Pods_Make_A_Date.framework */; };
 		2E2FC79520880C1100F665B9 /* SearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2FC79420880C1100F665B9 /* SearchResultsCell.swift */; };
+		2EE56D13208D11FB0050DA4B /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE56D12208D11FB0050DA4B /* YelpClient.swift */; };
+		2EE56D15208D12350050DA4B /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE56D14208D12350050DA4B /* Business.swift */; };
 		33DAA25F2083C3E100ECFFE0 /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DAA25E2083C3E100ECFFE0 /* EventPageViewController.swift */; };
 		840409A320631CB40043973A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840409A220631CB40043973A /* AppDelegate.swift */; };
 		840409A520631CB40043973A /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840409A420631CB40043973A /* ProfilePageViewController.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		2E2FC79420880C1100F665B9 /* SearchResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsCell.swift; sourceTree = "<group>"; };
+		2EE56D12208D11FB0050DA4B /* YelpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
+		2EE56D14208D12350050DA4B /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Business.swift; path = "Make A Date/API/Business.swift"; sourceTree = SOURCE_ROOT; };
 		33DAA25E2083C3E100ECFFE0 /* EventPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
 		553533101816C301A4794ED3 /* Pods-Make A Date.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Make A Date.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Make A Date/Pods-Make A Date.debug.xcconfig"; sourceTree = "<group>"; };
 		8404099F20631CB40043973A /* Make A Date.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Make A Date.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +62,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2EE56D11208D11E80050DA4B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2EE56D12208D11FB0050DA4B /* YelpClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		73ABD8AD85F37AF418A1884B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +100,7 @@
 		840409A120631CB40043973A /* Make A Date */ = {
 			isa = PBXGroup;
 			children = (
+				2EE56D11208D11E80050DA4B /* API */,
 				84596F22207BF6490012E651 /* Extensions + Helper */,
 				849E5995206AC902000D252A /* Views */,
 				849E5994206AC8FC000D252A /* Services */,
@@ -122,6 +135,7 @@
 		849E5991206AC8D4000D252A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2EE56D14208D12350050DA4B /* Business.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -237,6 +251,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Make A Date/Pods-Make A Date-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthUI/AWSAuthUI.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
@@ -245,9 +260,11 @@
 				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSPinpoint/AWSPinpoint.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework",
+				"${BUILT_PRODUCTS_DIR}/BDBOAuth1Manager/BDBOAuth1Manager.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthUI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
@@ -256,6 +273,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSPinpoint.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSUserPoolsSignIn.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BDBOAuth1Manager.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -292,7 +310,9 @@
 				840409AB20631CB40043973A /* Make_A_Date.xcdatamodeld in Sources */,
 				840409A320631CB40043973A /* AppDelegate.swift in Sources */,
 				33DAA25F2083C3E100ECFFE0 /* EventPageViewController.swift in Sources */,
+				2EE56D15208D12350050DA4B /* Business.swift in Sources */,
 				84596F24207BF6620012E651 /* System Extension.swift in Sources */,
+				2EE56D13208D11FB0050DA4B /* YelpClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
