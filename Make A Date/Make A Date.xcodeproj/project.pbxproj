@@ -11,6 +11,7 @@
 		2E2FC79520880C1100F665B9 /* SearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2FC79420880C1100F665B9 /* SearchResultsCell.swift */; };
 		2EE56D13208D11FB0050DA4B /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE56D12208D11FB0050DA4B /* YelpClient.swift */; };
 		2EE56D15208D12350050DA4B /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE56D14208D12350050DA4B /* Business.swift */; };
+		2EE56D19208EDD3C0050DA4B /* searchSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE56D18208EDD3C0050DA4B /* searchSettingsViewController.swift */; };
 		33DAA25F2083C3E100ECFFE0 /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DAA25E2083C3E100ECFFE0 /* EventPageViewController.swift */; };
 		840409A320631CB40043973A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840409A220631CB40043973A /* AppDelegate.swift */; };
 		840409A520631CB40043973A /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840409A420631CB40043973A /* ProfilePageViewController.swift */; };
@@ -26,6 +27,7 @@
 		2E2FC79420880C1100F665B9 /* SearchResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsCell.swift; sourceTree = "<group>"; };
 		2EE56D12208D11FB0050DA4B /* YelpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
 		2EE56D14208D12350050DA4B /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Business.swift; path = "Make A Date/API/Business.swift"; sourceTree = SOURCE_ROOT; };
+		2EE56D18208EDD3C0050DA4B /* searchSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchSettingsViewController.swift; sourceTree = "<group>"; };
 		33DAA25E2083C3E100ECFFE0 /* EventPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
 		553533101816C301A4794ED3 /* Pods-Make A Date.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Make A Date.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Make A Date/Pods-Make A Date.debug.xcconfig"; sourceTree = "<group>"; };
 		8404099F20631CB40043973A /* Make A Date.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Make A Date.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 			children = (
 				840409A420631CB40043973A /* ProfilePageViewController.swift */,
 				33DAA25E2083C3E100ECFFE0 /* EventPageViewController.swift */,
+				2EE56D18208EDD3C0050DA4B /* searchSettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				840409A320631CB40043973A /* AppDelegate.swift in Sources */,
 				33DAA25F2083C3E100ECFFE0 /* EventPageViewController.swift in Sources */,
 				2EE56D15208D12350050DA4B /* Business.swift in Sources */,
+				2EE56D19208EDD3C0050DA4B /* searchSettingsViewController.swift in Sources */,
 				84596F24207BF6620012E651 /* System Extension.swift in Sources */,
 				2EE56D13208D11FB0050DA4B /* YelpClient.swift in Sources */,
 			);

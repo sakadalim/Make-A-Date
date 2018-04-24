@@ -11,10 +11,9 @@ import UIKit
 
 class SearchResultCell : UITableViewCell {
     
-    
     @IBOutlet weak var locationName: UILabel!
     @IBOutlet weak var locationCategory: UILabel!
     @IBOutlet weak var locationImage: UIImageView!
     @IBOutlet weak var distance: UILabel!
-    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var locationAddress: UILabel!
 }
