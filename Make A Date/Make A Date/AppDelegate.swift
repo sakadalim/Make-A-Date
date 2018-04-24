@@ -14,7 +14,7 @@ import AWSPinpoint
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+ 
     var window: UIWindow?
     var pinpoint: AWSPinpoint?
 

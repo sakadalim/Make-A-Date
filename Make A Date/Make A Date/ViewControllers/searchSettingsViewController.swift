@@ -8,16 +8,17 @@
 import Foundation
 import UIKit
 
-class searchSettingViewController: UIViewController{
+class searchSettingViewController: UIViewController {
     
-    
-    @IBAction func slideChanged(_ sender: Any) {
-        var currentVal=rangeSlider.value
-        rangeLabel.text = "\(currentVal)mi"
+
+    @IBAction func changeRange(_ sender: Any) {
+        var val = rangeSlider.value
+        rangeLabel.text = "\(val)mi"
     }
-    @IBOutlet weak var rangeLabel: UILabel!
     @IBOutlet weak var rangeSlider: UISlider!
-    @IBAction func back(_ sender: UIButton!) {
+    @IBOutlet weak var rangeLabel: UILabel!
+    
+    @IBAction func goBack(_ sender: Any) {
         performSegue(withIdentifier: "toEvents", sender: self)
     }
     override func viewDidLoad() {
