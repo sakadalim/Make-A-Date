@@ -75,7 +75,6 @@
 		2C4FF62F864DB705F319E25A58CB8765 /* AWSTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E7D469B134ED98D73F8EB67409E615A8 /* AWSTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C9A901B233FC345426D27093D98D921 /* AWSPinpointTargeting.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BF1A8FE516289CB3A65DBDBC8281B50 /* AWSPinpointTargeting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2ED997B259CF87164EB742D3C6E3C670 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5EAE162692EAC002F18F477F6DA99E /* AFURLResponseSerialization.m */; };
-		2EE56D17208EDD120050DA4B /* searchSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE56D16208EDD120050DA4B /* searchSettingsViewController.swift */; };
 		300F34DBD1EAD72F220D42721638201C /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = F99F6B55C4307394D7ABAD1E31AF91C3 /* UIImageView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		317CDF15DD891A412E0297A1078B88BA /* AWSDDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AF3D3B6F983B1C2DC5F48C1D6FCAAFA /* AWSDDLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32C488C99F8E78CD10D22DE48017A93E /* AWSTaskCompletionSource.h in Headers */ = {isa = PBXBuildFile; fileRef = C806A42B127F9A84353214CF2483D021 /* AWSTaskCompletionSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -635,7 +634,6 @@
 		2B6946D1B43F97F724A63628100F3BA2 /* AWSCognitoIdentityService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSCognitoIdentityService.m; path = AWSCore/CognitoIdentity/AWSCognitoIdentityService.m; sourceTree = "<group>"; };
 		2DED4A43546ACFCEDB82E13EC6AC655B /* AWSTMCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSTMCache.m; path = AWSCore/TMCache/AWSTMCache.m; sourceTree = "<group>"; };
 		2EDA1409C23FD384BBB3B79ADB71FA85 /* AWSIdentityProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSIdentityProvider.m; path = AWSCore/Authentication/AWSIdentityProvider.m; sourceTree = "<group>"; };
-		2EE56D16208EDD120050DA4B /* searchSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = searchSettingsViewController.swift; path = "../Make A Date/ViewControllers/searchSettingsViewController.swift"; sourceTree = "<group>"; };
 		2EF9A0428467CCDF5466FE17852D88D8 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		2F3FDB57E7AD022D1479F612BD9F6888 /* AWSLogging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AWSLogging.m; path = AWSCore/Utility/AWSLogging.m; sourceTree = "<group>"; };
 		2F715E932680F3C2B8173A099BD6B4A8 /* AWSCognitoIdentityProvider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AWSCognitoIdentityProvider-prefix.pch"; sourceTree = "<group>"; };
@@ -1558,7 +1556,6 @@
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				2EE56D16208EDD120050DA4B /* searchSettingsViewController.swift */,
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				B39FA2D66BE3C94DC351B81EC65FFBDF /* Frameworks */,
 				69A1F7A2887760411DCDD69189483A09 /* Pods */,
@@ -2602,7 +2599,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				54A93A8656A260977A67B4682BCBA26F /* AFHTTPRequestOperation.m in Sources */,
-				2EE56D17208EDD120050DA4B /* searchSettingsViewController.swift in Sources */,
 				07CCA2377CCFDD58EB8F0738D9D88917 /* AFHTTPRequestOperationManager.m in Sources */,
 				452BE369A0DEEFCAD4A522BA15C3EC53 /* AFHTTPSessionManager.m in Sources */,
 				CF0E8D70D0E6ECB756F7029AE0842E17 /* AFNetworkActivityIndicatorManager.m in Sources */,

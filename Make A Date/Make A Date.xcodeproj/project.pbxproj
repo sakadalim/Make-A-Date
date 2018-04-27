@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1C39B48EC8C5707DDC02A485 /* Pods_Make_A_Date.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C917D73C0FAC20F16F5CAD74 /* Pods_Make_A_Date.framework */; };
+		2E0C164020920217000C7769 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0C163F20920217000C7769 /* SearchViewController.swift */; };
+		2E0C1643209205A1000C7769 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840409A620631CB40043973A /* Main.storyboard */; };
 		2E2FC79520880C1100F665B9 /* SearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2FC79420880C1100F665B9 /* SearchResultsCell.swift */; };
+		2ECFAE762091F81E008EF0B6 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECFAE732091F81D008EF0B6 /* ProfilePageViewController.swift */; };
+		2ECFAE772091F81E008EF0B6 /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECFAE742091F81E008EF0B6 /* EventPageViewController.swift */; };
 		2EE56D13208D11FB0050DA4B /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE56D12208D11FB0050DA4B /* YelpClient.swift */; };
 		2EE56D15208D12350050DA4B /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE56D14208D12350050DA4B /* Business.swift */; };
-		2EE56D19208EDD3C0050DA4B /* searchSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE56D18208EDD3C0050DA4B /* searchSettingsViewController.swift */; };
-		33DAA25F2083C3E100ECFFE0 /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DAA25E2083C3E100ECFFE0 /* EventPageViewController.swift */; };
 		840409A320631CB40043973A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840409A220631CB40043973A /* AppDelegate.swift */; };
-		840409A520631CB40043973A /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840409A420631CB40043973A /* ProfilePageViewController.swift */; };
-		840409A820631CB40043973A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840409A620631CB40043973A /* Main.storyboard */; };
 		840409AB20631CB40043973A /* Make_A_Date.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 840409A920631CB40043973A /* Make_A_Date.xcdatamodeld */; };
 		840409AD20631CB40043973A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840409AC20631CB40043973A /* Assets.xcassets */; };
 		840409B020631CB40043973A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840409AE20631CB40043973A /* LaunchScreen.storyboard */; };
@@ -24,15 +24,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E0C163F20920217000C7769 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "Make A Date/ViewControllers/SearchViewController.swift"; sourceTree = SOURCE_ROOT; };
 		2E2FC79420880C1100F665B9 /* SearchResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsCell.swift; sourceTree = "<group>"; };
+		2ECFAE732091F81D008EF0B6 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfilePageViewController.swift; path = "Make A Date/ViewControllers/ProfilePageViewController.swift"; sourceTree = SOURCE_ROOT; };
+		2ECFAE742091F81E008EF0B6 /* EventPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventPageViewController.swift; path = "Make A Date/ViewControllers/EventPageViewController.swift"; sourceTree = SOURCE_ROOT; };
 		2EE56D12208D11FB0050DA4B /* YelpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
 		2EE56D14208D12350050DA4B /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Business.swift; path = "Make A Date/API/Business.swift"; sourceTree = SOURCE_ROOT; };
-		2EE56D18208EDD3C0050DA4B /* searchSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchSettingsViewController.swift; sourceTree = "<group>"; };
-		33DAA25E2083C3E100ECFFE0 /* EventPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
 		553533101816C301A4794ED3 /* Pods-Make A Date.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Make A Date.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Make A Date/Pods-Make A Date.debug.xcconfig"; sourceTree = "<group>"; };
 		8404099F20631CB40043973A /* Make A Date.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Make A Date.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		840409A220631CB40043973A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		840409A420631CB40043973A /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
 		840409A720631CB40043973A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		840409AA20631CB40043973A /* Make_A_Date.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Make_A_Date.xcdatamodel; sourceTree = "<group>"; };
 		840409AC20631CB40043973A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +62,17 @@
 				C917D73C0FAC20F16F5CAD74 /* Pods_Make_A_Date.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2ECFAE7220918D36008EF0B6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2ECFAE742091F81E008EF0B6 /* EventPageViewController.swift */,
+				2ECFAE732091F81D008EF0B6 /* ProfilePageViewController.swift */,
+				2E0C163F20920217000C7769 /* SearchViewController.swift */,
+			);
+			name = ViewControllers;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		2EE56D11208D11E80050DA4B /* API */ = {
@@ -102,12 +113,12 @@
 		840409A120631CB40043973A /* Make A Date */ = {
 			isa = PBXGroup;
 			children = (
+				2ECFAE7220918D36008EF0B6 /* ViewControllers */,
 				2EE56D11208D11E80050DA4B /* API */,
 				84596F22207BF6490012E651 /* Extensions + Helper */,
 				849E5995206AC902000D252A /* Views */,
 				849E5994206AC8FC000D252A /* Services */,
 				849E5993206AC8F0000D252A /* SupportingFiles */,
-				849E5992206AC8DF000D252A /* ViewControllers */,
 				849E5991206AC8D4000D252A /* Models */,
 				849E5990206AC8C0000D252A /* Storyboards */,
 				840409A220631CB40043973A /* AppDelegate.swift */,
@@ -140,16 +151,6 @@
 				2EE56D14208D12350050DA4B /* Business.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		849E5992206AC8DF000D252A /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				840409A420631CB40043973A /* ProfilePageViewController.swift */,
-				33DAA25E2083C3E100ECFFE0 /* EventPageViewController.swift */,
-				2EE56D18208EDD3C0050DA4B /* searchSettingsViewController.swift */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		849E5993206AC8F0000D252A /* SupportingFiles */ = {
@@ -237,10 +238,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E0C1643209205A1000C7769 /* Main.storyboard in Resources */,
 				848BB73320635B1D00AB437F /* awsconfiguration.json in Resources */,
 				840409B020631CB40043973A /* LaunchScreen.storyboard in Resources */,
 				840409AD20631CB40043973A /* Assets.xcassets in Resources */,
-				840409A820631CB40043973A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,13 +310,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E2FC79520880C1100F665B9 /* SearchResultsCell.swift in Sources */,
-				840409A520631CB40043973A /* ProfilePageViewController.swift in Sources */,
 				840409AB20631CB40043973A /* Make_A_Date.xcdatamodeld in Sources */,
 				840409A320631CB40043973A /* AppDelegate.swift in Sources */,
-				33DAA25F2083C3E100ECFFE0 /* EventPageViewController.swift in Sources */,
 				2EE56D15208D12350050DA4B /* Business.swift in Sources */,
-				2EE56D19208EDD3C0050DA4B /* searchSettingsViewController.swift in Sources */,
 				84596F24207BF6620012E651 /* System Extension.swift in Sources */,
+				2ECFAE762091F81E008EF0B6 /* ProfilePageViewController.swift in Sources */,
+				2E0C164020920217000C7769 /* SearchViewController.swift in Sources */,
+				2ECFAE772091F81E008EF0B6 /* EventPageViewController.swift in Sources */,
 				2EE56D13208D11FB0050DA4B /* YelpClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
