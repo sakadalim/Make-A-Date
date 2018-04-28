@@ -34,19 +34,13 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        navigationController?.setNavigationBarHidden(true, animated: true)
         if !AWSSignInManager.sharedInstance().isLoggedIn {
             presentAuthUIViewController()
         }
     }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        navigationController?.setNavigationBarHidden(false, animated: false)
-        
-        
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: false)
         location = nil
         locationTextField.delegate = self
         setupDatePicker()

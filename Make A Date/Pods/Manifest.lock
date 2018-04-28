@@ -1,35 +1,62 @@
 PODS:
-  - AWSAuthCore (2.6.16):
-    - AWSCore (= 2.6.16)
-  - AWSAuthUI (2.6.16):
-    - AWSAuthCore (= 2.6.16)
-    - AWSCore (= 2.6.16)
-  - AWSCognitoIdentityProvider (2.6.16):
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - AWSAuthCore (2.6.17):
+    - AWSCore (= 2.6.17)
+  - AWSAuthUI (2.6.17):
+    - AWSAuthCore (= 2.6.17)
+    - AWSCore (= 2.6.17)
+  - AWSCognitoIdentityProvider (2.6.17):
     - AWSCognitoIdentityProviderASF (= 1.0.1)
-    - AWSCore (= 2.6.16)
+    - AWSCore (= 2.6.17)
   - AWSCognitoIdentityProviderASF (1.0.1)
-  - AWSCore (2.6.16)
-  - AWSDynamoDB (2.6.16):
-    - AWSCore (= 2.6.16)
-  - AWSMobileClient (2.6.16):
-    - AWSAuthCore (= 2.6.16)
-  - AWSPinpoint (2.6.16):
-    - AWSCore (= 2.6.16)
-  - AWSUserPoolsSignIn (2.6.16):
-    - AWSAuthCore (= 2.6.16)
-    - AWSCognitoIdentityProvider (= 2.6.16)
+  - AWSCore (2.6.17)
+  - AWSDynamoDB (2.6.17):
+    - AWSCore (= 2.6.17)
+  - AWSMobileClient (2.6.17):
+    - AWSAuthCore (= 2.6.17)
+  - AWSPinpoint (2.6.17):
+    - AWSCore (= 2.6.17)
+  - AWSUserPoolsSignIn (2.6.17):
+    - AWSAuthCore (= 2.6.17)
+    - AWSCognitoIdentityProvider (= 2.6.17)
+  - BDBOAuth1Manager (1.6.0):
+    - AFNetworking/NSURLConnection (~> 2.6.0)
+    - AFNetworking/NSURLSession (~> 2.6.0)
   - LocationPicker (1.1.0)
 
 DEPENDENCIES:
+  - AFNetworking (~> 2.5)
   - AWSAuthUI (~> 2.6.13)
   - AWSDynamoDB (~> 2.6.5)
   - AWSMobileClient (~> 2.6.13)
   - AWSPinpoint (~> 2.6.13)
   - AWSUserPoolsSignIn (~> 2.6.13)
+  - BDBOAuth1Manager
   - LocationPicker
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
     - AWSAuthCore
     - AWSAuthUI
     - AWSCognitoIdentityProvider
@@ -39,20 +66,23 @@ SPEC REPOS:
     - AWSMobileClient
     - AWSPinpoint
     - AWSUserPoolsSignIn
+    - BDBOAuth1Manager
     - LocationPicker
 
 SPEC CHECKSUMS:
-  AWSAuthCore: d0f6fcbe8957c3dc5f67ce4ac198cc1f2696ee17
-  AWSAuthUI: 0b44beb72d07305e135848a39e95db6f6e3913bc
-  AWSCognitoIdentityProvider: d09869af8aafbf4b802000613056e2107e17fbac
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  AWSAuthCore: 15a48ce8153e6b7b7df763e8df9d993c7797957e
+  AWSAuthUI: c275f3be411076b0aa33237cb9efc596c16aa631
+  AWSCognitoIdentityProvider: 9f15b1d0073c3585d791877c98e1315c368b4f18
   AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
-  AWSCore: 314df68684e338310409c6a3b050e28932deb6ff
-  AWSDynamoDB: aa8b7cd8510080e22d9aa2a282077bb295fdb741
-  AWSMobileClient: 04b2a1665c3535a47b60a44c9f28e5211139baf3
-  AWSPinpoint: 28140b49212223ee446eef5762fe52fce1512781
-  AWSUserPoolsSignIn: 6e4f8cad8193a565bc8896270a469316ca18c30d
+  AWSCore: 82fbb01d73a22cfae77ac2f03f6073a123092452
+  AWSDynamoDB: bbfc2583819099ccc0ba92eb54cb425049d4278b
+  AWSMobileClient: 7b8dd4ef7a7d5c08f258b547d061c3c2018d32d8
+  AWSPinpoint: e00eaa2a04a1c8176f1481391b32e43279471dd1
+  AWSUserPoolsSignIn: ba2e21e15527ba955194031fd40f02e1490630fe
+  BDBOAuth1Manager: cd5a5872f355ca38180d52ca2dd844f0b0c84797
   LocationPicker: 94dbd15ee053646d5c275d44b4dfce8634d66041
 
-PODFILE CHECKSUM: 0e1bb721ab03ad29003409934bee0e503c895978
+PODFILE CHECKSUM: 4922a7a1843ccf48ccc2d775065e7eef584d01ac
 
 COCOAPODS: 1.5.0

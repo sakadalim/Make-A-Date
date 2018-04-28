@@ -30,6 +30,12 @@
 		842EDB702084FDB1008DCEDC /* UserInterests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EDB6F2084FDB1008DCEDC /* UserInterests.swift */; };
 		8431DD69208A793A0035836B /* QuestionnaireInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431DD68208A793A0035836B /* QuestionnaireInitialViewController.swift */; };
 		8431DD6B208BC4000035836B /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 8431DD6A208BC4000035836B /* awsconfiguration.json */; };
+		844B4C132094EDB9008BB849 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844B4C122094EDB9008BB849 /* Search.storyboard */; };
+		844B4C152094EE9C008BB849 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B4C142094EE9C008BB849 /* SearchViewController.swift */; };
+		844B4C172094EEB8008BB849 /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B4C162094EEB7008BB849 /* EventPageViewController.swift */; };
+		844B4C192094F009008BB849 /* SearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B4C182094F009008BB849 /* SearchResultsCell.swift */; };
+		844B4C1C2094F019008BB849 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B4C1A2094F019008BB849 /* Business.swift */; };
+		844B4C1D2094F019008BB849 /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B4C1B2094F019008BB849 /* YelpClient.swift */; };
 		84596F24207BF6620012E651 /* System Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84596F23207BF6620012E651 /* System Extension.swift */; };
 		84EBDFCF20827CEB0076C121 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBDFCD20827CEB0076C121 /* Location.swift */; };
 		84EBDFD020827CEB0076C121 /* SearchHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBDFCE20827CEB0076C121 /* SearchHistoryManager.swift */; };
@@ -64,6 +70,12 @@
 		842EDB6F2084FDB1008DCEDC /* UserInterests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInterests.swift; sourceTree = "<group>"; };
 		8431DD68208A793A0035836B /* QuestionnaireInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireInitialViewController.swift; sourceTree = "<group>"; };
 		8431DD6A208BC4000035836B /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		844B4C122094EDB9008BB849 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		844B4C142094EE9C008BB849 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		844B4C162094EEB7008BB849 /* EventPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
+		844B4C182094F009008BB849 /* SearchResultsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsCell.swift; sourceTree = "<group>"; };
+		844B4C1A2094F019008BB849 /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		844B4C1B2094F019008BB849 /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
 		84596F23207BF6620012E651 /* System Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "System Extension.swift"; sourceTree = "<group>"; };
 		84EBDFCD20827CEB0076C121 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		84EBDFCE20827CEB0076C121 /* SearchHistoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHistoryManager.swift; sourceTree = "<group>"; };
@@ -141,6 +153,7 @@
 		842EDB4E20845972008DCEDC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				844B4C182094F009008BB849 /* SearchResultsCell.swift */,
 				842EDB4F2084598B008DCEDC /* QuestionnaireViewModel */,
 			);
 			path = Views;
@@ -186,6 +199,7 @@
 		849E5990206AC8C0000D252A /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				844B4C122094EDB9008BB849 /* Search.storyboard */,
 				842EDB6B208459B5008DCEDC /* UserQuestionnaire.storyboard */,
 				840409A620631CB40043973A /* Main.storyboard */,
 			);
@@ -204,6 +218,8 @@
 		849E5992206AC8DF000D252A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				844B4C162094EEB7008BB849 /* EventPageViewController.swift */,
+				844B4C142094EE9C008BB849 /* SearchViewController.swift */,
 				842EDB5E208459A4008DCEDC /* QuestionnaireViewController */,
 				84EBDFD120827D140076C121 /* LocationPickerViewController.swift */,
 				84EBDFD220827D150076C121 /* LocationSearchResultsViewController.swift */,
@@ -225,6 +241,8 @@
 		849E5994206AC8FC000D252A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				844B4C1A2094F019008BB849 /* Business.swift */,
+				844B4C1B2094F019008BB849 /* YelpClient.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -294,6 +312,7 @@
 				840409B020631CB40043973A /* LaunchScreen.storyboard in Resources */,
 				8431DD6B208BC4000035836B /* awsconfiguration.json in Resources */,
 				842EDB6C208459B5008DCEDC /* UserQuestionnaire.storyboard in Resources */,
+				844B4C132094EDB9008BB849 /* Search.storyboard in Resources */,
 				840409AD20631CB40043973A /* Assets.xcassets in Resources */,
 				840409A820631CB40043973A /* Main.storyboard in Resources */,
 			);
@@ -309,6 +328,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Make A Date/Pods-Make A Date-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthUI/AWSAuthUI.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
@@ -318,10 +338,12 @@
 				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSPinpoint/AWSPinpoint.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework",
+				"${BUILT_PRODUCTS_DIR}/BDBOAuth1Manager/BDBOAuth1Manager.framework",
 				"${BUILT_PRODUCTS_DIR}/LocationPicker/LocationPicker.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthUI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
@@ -331,6 +353,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSPinpoint.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSUserPoolsSignIn.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BDBOAuth1Manager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LocationPicker.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,14 +399,19 @@
 				840409A320631CB40043973A /* AppDelegate.swift in Sources */,
 				84EBDFD020827CEB0076C121 /* SearchHistoryManager.swift in Sources */,
 				84596F24207BF6620012E651 /* System Extension.swift in Sources */,
+				844B4C1C2094F019008BB849 /* Business.swift in Sources */,
+				844B4C152094EE9C008BB849 /* SearchViewController.swift in Sources */,
 				842EDB592084598B008DCEDC /* Model.swift in Sources */,
+				844B4C1D2094F019008BB849 /* YelpClient.swift in Sources */,
 				842EDB5D2084598B008DCEDC /* ViewModel.swift in Sources */,
 				84EBDFDF2083C45D0076C121 /* UserProfile.swift in Sources */,
 				842EDB5A2084598B008DCEDC /* CustomCell.swift in Sources */,
 				8431DD69208A793A0035836B /* QuestionnaireInitialViewController.swift in Sources */,
 				842EDB5C2084598B008DCEDC /* ViewModel04.swift in Sources */,
 				842EDB6A208459A4008DCEDC /* SecondViewController.swift in Sources */,
+				844B4C192094F009008BB849 /* SearchResultsCell.swift in Sources */,
 				842EDB65208459A4008DCEDC /* ViewController.swift in Sources */,
+				844B4C172094EEB8008BB849 /* EventPageViewController.swift in Sources */,
 				842EDB572084598B008DCEDC /* ViewModel03.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
