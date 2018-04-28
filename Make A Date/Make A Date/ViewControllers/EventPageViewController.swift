@@ -147,13 +147,12 @@ class EventPageViewController: UIViewController, CLLocationManagerDelegate, Pass
                         self.res.append(newCell)
                         count+=1
                         print("Total Res: \(count)")
-                        DispatchQueue.main.async {
-                            self.eventTableView.reloadData()
+                        
+                        self.eventTableView.reloadData()
                         }
                     }
                 }
                 
-        }
         )
         
     }
