@@ -28,6 +28,19 @@ DEPENDENCIES:
   - AWSUserPoolsSignIn (~> 2.6.13)
   - LocationPicker
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AWSAuthCore
+    - AWSAuthUI
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - AWSDynamoDB
+    - AWSMobileClient
+    - AWSPinpoint
+    - AWSUserPoolsSignIn
+    - LocationPicker
+
 SPEC CHECKSUMS:
   AWSAuthCore: d0f6fcbe8957c3dc5f67ce4ac198cc1f2696ee17
   AWSAuthUI: 0b44beb72d07305e135848a39e95db6f6e3913bc
@@ -40,6 +53,6 @@ SPEC CHECKSUMS:
   AWSUserPoolsSignIn: 6e4f8cad8193a565bc8896270a469316ca18c30d
   LocationPicker: 94dbd15ee053646d5c275d44b4dfce8634d66041
 
-PODFILE CHECKSUM: 3ea3ec10856e38e013d767aaa768291f08eff46b
+PODFILE CHECKSUM: 0e1bb721ab03ad29003409934bee0e503c895978
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0

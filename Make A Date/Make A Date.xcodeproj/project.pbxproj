@@ -241,7 +241,6 @@
 				8404099C20631CB40043973A /* Frameworks */,
 				8404099D20631CB40043973A /* Resources */,
 				6CA9D481EE2073CD3BD54419 /* [CP] Embed Pods Frameworks */,
-				4453C49F58F7795F4DC953D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -303,21 +302,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4453C49F58F7795F4DC953D6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Make A Date/Pods-Make A Date-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6CA9D481EE2073CD3BD54419 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
