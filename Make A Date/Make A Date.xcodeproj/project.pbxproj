@@ -32,11 +32,11 @@
 		8431DD6B208BC4000035836B /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 8431DD6A208BC4000035836B /* awsconfiguration.json */; };
 		844B4C132094EDB9008BB849 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844B4C122094EDB9008BB849 /* Search.storyboard */; };
 		844B4C152094EE9C008BB849 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B4C142094EE9C008BB849 /* SearchViewController.swift */; };
-		844B4C172094EEB8008BB849 /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B4C162094EEB7008BB849 /* EventPageViewController.swift */; };
 		844B4C192094F009008BB849 /* SearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B4C182094F009008BB849 /* SearchResultsCell.swift */; };
 		844B4C1C2094F019008BB849 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B4C1A2094F019008BB849 /* Business.swift */; };
 		844B4C1D2094F019008BB849 /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B4C1B2094F019008BB849 /* YelpClient.swift */; };
 		84596F24207BF6620012E651 /* System Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84596F23207BF6620012E651 /* System Extension.swift */; };
+		84C42A592097AE6900DFEEAD /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C42A582097AE6900DFEEAD /* EventPageViewController.swift */; };
 		84EBDFCF20827CEB0076C121 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBDFCD20827CEB0076C121 /* Location.swift */; };
 		84EBDFD020827CEB0076C121 /* SearchHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBDFCE20827CEB0076C121 /* SearchHistoryManager.swift */; };
 		84EBDFD320827D150076C121 /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBDFD120827D140076C121 /* LocationPickerViewController.swift */; };
@@ -72,11 +72,11 @@
 		8431DD6A208BC4000035836B /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		844B4C122094EDB9008BB849 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		844B4C142094EE9C008BB849 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		844B4C162094EEB7008BB849 /* EventPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
 		844B4C182094F009008BB849 /* SearchResultsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsCell.swift; sourceTree = "<group>"; };
 		844B4C1A2094F019008BB849 /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		844B4C1B2094F019008BB849 /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
 		84596F23207BF6620012E651 /* System Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "System Extension.swift"; sourceTree = "<group>"; };
+		84C42A582097AE6900DFEEAD /* EventPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
 		84EBDFCD20827CEB0076C121 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		84EBDFCE20827CEB0076C121 /* SearchHistoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHistoryManager.swift; sourceTree = "<group>"; };
 		84EBDFD120827D140076C121 /* LocationPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPickerViewController.swift; sourceTree = "<group>"; };
@@ -218,7 +218,7 @@
 		849E5992206AC8DF000D252A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				844B4C162094EEB7008BB849 /* EventPageViewController.swift */,
+				84C42A582097AE6900DFEEAD /* EventPageViewController.swift */,
 				844B4C142094EE9C008BB849 /* SearchViewController.swift */,
 				842EDB5E208459A4008DCEDC /* QuestionnaireViewController */,
 				84EBDFD120827D140076C121 /* LocationPickerViewController.swift */,
@@ -399,6 +399,7 @@
 				840409A320631CB40043973A /* AppDelegate.swift in Sources */,
 				84EBDFD020827CEB0076C121 /* SearchHistoryManager.swift in Sources */,
 				84596F24207BF6620012E651 /* System Extension.swift in Sources */,
+				84C42A592097AE6900DFEEAD /* EventPageViewController.swift in Sources */,
 				844B4C1C2094F019008BB849 /* Business.swift in Sources */,
 				844B4C152094EE9C008BB849 /* SearchViewController.swift in Sources */,
 				842EDB592084598B008DCEDC /* Model.swift in Sources */,
@@ -411,7 +412,6 @@
 				842EDB6A208459A4008DCEDC /* SecondViewController.swift in Sources */,
 				844B4C192094F009008BB849 /* SearchResultsCell.swift in Sources */,
 				842EDB65208459A4008DCEDC /* ViewController.swift in Sources */,
-				844B4C172094EEB8008BB849 /* EventPageViewController.swift in Sources */,
 				842EDB572084598B008DCEDC /* ViewModel03.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

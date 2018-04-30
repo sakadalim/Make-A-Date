@@ -34,6 +34,26 @@ class EventPageViewController: UIViewController, CLLocationManagerDelegate, Pass
     func stringChanged(search: String?) {
         searchTerm? = search!
     }
+    lazy var refreshControl: UIRefreshControl = {
+        
+        let refreshControl = UIRefreshControl()
+        
+        refreshControl.addTarget(self, action:
+            #selector(self.reload(_:)),
+                                 for: UIControlEvents.allEvents)
+        
+        refreshControl.tintColor = UIColor.amethyst
+        
+        return refreshControl
+    }()
+    
+//    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+//        res = [ResultContent]()
+////        self.eventTableView.reloadData()
+//        self.viewDidLoad()
+//        refreshControl.endRefreshing()
+//    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
         
@@ -78,20 +98,14 @@ class EventPageViewController: UIViewController, CLLocationManagerDelegate, Pass
         print("\(lat),\(long)")
         
     }
-    func refresh(refreshControl: UIRefreshControl) {
-        
-        refreshControl.endRefreshing()
-        
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-//        navigationController?.setNavigationBarHidden(false, animated: false)
-    }
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
-         navigationController?.setNavigationBarHidden(true, animated: false)
         print("VIEWDIDLOAD")
+        
+        self.eventTableView.addSubview(self.refreshControl)
+        
         if range == nil{
             range = 15
         }
@@ -161,6 +175,9 @@ class EventPageViewController: UIViewController, CLLocationManagerDelegate, Pass
         )
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
 
 }
 
@@ -183,7 +200,7 @@ extension EventPageViewController: UITableViewDataSource, UITableViewDelegate{
         if(self.res[indexPath.row].imageUrl) != nil{
             cell.downloadImage(url:self.res[indexPath.row].imageUrl!)
         }else{
-            let yourImage: UIImage = UIImage(named: "not-found")!
+            var yourImage: UIImage = UIImage(named: "not-found")!
             cell.locationImage.image = yourImage
         }
         
