@@ -62,9 +62,7 @@ class SearchViewController: UIViewController {
         searchTerm = term
         print("CHANGE VAL" + searchString.text!)
     }
-//    override func viewWillDisappear(_ animated: Bool) {
-//         navigationController?.setNavigationBarHidden(true, animated: false)
-//    }
+
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }

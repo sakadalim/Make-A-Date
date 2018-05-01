@@ -12,15 +12,6 @@ import AFNetworking
 
 import Foundation
 
-class ResultContent {
-    var locationName: String?
-    var locationCategory: String?
-    //var locationImage: String?
-    var distance: String?
-    var locationAddress: String?
-    var rating: String?
-    var imageUrl: URL?
-}
 
 class EventPageViewController: UIViewController, CLLocationManagerDelegate, PassBackDelegate {
     func rangeChanged(rangee: Float?) {
@@ -47,28 +38,25 @@ class EventPageViewController: UIViewController, CLLocationManagerDelegate, Pass
         return refreshControl
     }()
     
-//    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-//        res = [ResultContent]()
-////        self.eventTableView.reloadData()
-//        self.viewDidLoad()
-//        refreshControl.endRefreshing()
-//    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
         guard let identifier = segue.identifier else { return }
-        
         switch identifier {
         case "toSettings":
             
-            let vc = segue.destination as? SearchViewController
-            vc?.rangeVal = self.range
-            vc?.searchTerm = self.searchTerm
-            vc?.delegate=self
-            print(vc?.searchString?.text)
+            let destination = segue.destination as? SearchViewController
+            destination?.rangeVal = self.range
+            destination?.searchTerm = self.searchTerm
+            destination?.delegate=self
+            print(destination?.searchString?.text)
             print("PASSING A->B")
             
-            
-
+        case "toResultContent":
+            let destination = segue.destination as? ItemViewController
+            if let indexPath = self.eventTableView.indexPathForSelectedRow {
+                destination?.resultContent = res[indexPath.row]
+            }
+                
         default:
             print("unexpected segue identifier")
         }
@@ -177,6 +165,9 @@ class EventPageViewController: UIViewController, CLLocationManagerDelegate, Pass
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toResultContent", sender: self)
     }
 
 }

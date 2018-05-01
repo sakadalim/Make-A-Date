@@ -20,6 +20,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Add events to calendar</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>For Search</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

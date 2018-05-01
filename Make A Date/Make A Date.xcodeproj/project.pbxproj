@@ -29,7 +29,6 @@
 		842EDB6C208459B5008DCEDC /* UserQuestionnaire.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842EDB6B208459B5008DCEDC /* UserQuestionnaire.storyboard */; };
 		842EDB702084FDB1008DCEDC /* UserInterests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EDB6F2084FDB1008DCEDC /* UserInterests.swift */; };
 		8431DD69208A793A0035836B /* QuestionnaireInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431DD68208A793A0035836B /* QuestionnaireInitialViewController.swift */; };
-		8431DD6B208BC4000035836B /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 8431DD6A208BC4000035836B /* awsconfiguration.json */; };
 		844B4C132094EDB9008BB849 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844B4C122094EDB9008BB849 /* Search.storyboard */; };
 		844B4C152094EE9C008BB849 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B4C142094EE9C008BB849 /* SearchViewController.swift */; };
 		844B4C192094F009008BB849 /* SearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B4C182094F009008BB849 /* SearchResultsCell.swift */; };
@@ -37,6 +36,11 @@
 		844B4C1D2094F019008BB849 /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B4C1B2094F019008BB849 /* YelpClient.swift */; };
 		84596F24207BF6620012E651 /* System Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84596F23207BF6620012E651 /* System Extension.swift */; };
 		84C42A592097AE6900DFEEAD /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C42A582097AE6900DFEEAD /* EventPageViewController.swift */; };
+		84C42A5B2097C9D400DFEEAD /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C42A5A2097C9D400DFEEAD /* ItemViewController.swift */; };
+		84C42A5D2097D6D000DFEEAD /* ResultContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C42A5C2097D6D000DFEEAD /* ResultContent.swift */; };
+		84C42A5F2097FF0B00DFEEAD /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C42A5E2097FF0B00DFEEAD /* EventKit.framework */; };
+		84C42A612098033100DFEEAD /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 84C42A602098033000DFEEAD /* awsconfiguration.json */; };
+		84C42A632098036F00DFEEAD /* UserSavedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C42A622098036F00DFEEAD /* UserSavedItem.swift */; };
 		84EBDFCF20827CEB0076C121 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBDFCD20827CEB0076C121 /* Location.swift */; };
 		84EBDFD020827CEB0076C121 /* SearchHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBDFCE20827CEB0076C121 /* SearchHistoryManager.swift */; };
 		84EBDFD320827D150076C121 /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBDFD120827D140076C121 /* LocationPickerViewController.swift */; };
@@ -69,7 +73,6 @@
 		842EDB6B208459B5008DCEDC /* UserQuestionnaire.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserQuestionnaire.storyboard; sourceTree = "<group>"; };
 		842EDB6F2084FDB1008DCEDC /* UserInterests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInterests.swift; sourceTree = "<group>"; };
 		8431DD68208A793A0035836B /* QuestionnaireInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireInitialViewController.swift; sourceTree = "<group>"; };
-		8431DD6A208BC4000035836B /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		844B4C122094EDB9008BB849 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		844B4C142094EE9C008BB849 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		844B4C182094F009008BB849 /* SearchResultsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsCell.swift; sourceTree = "<group>"; };
@@ -77,6 +80,11 @@
 		844B4C1B2094F019008BB849 /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
 		84596F23207BF6620012E651 /* System Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "System Extension.swift"; sourceTree = "<group>"; };
 		84C42A582097AE6900DFEEAD /* EventPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
+		84C42A5A2097C9D400DFEEAD /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		84C42A5C2097D6D000DFEEAD /* ResultContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultContent.swift; sourceTree = "<group>"; };
+		84C42A5E2097FF0B00DFEEAD /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		84C42A602098033000DFEEAD /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		84C42A622098036F00DFEEAD /* UserSavedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSavedItem.swift; sourceTree = "<group>"; };
 		84EBDFCD20827CEB0076C121 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		84EBDFCE20827CEB0076C121 /* SearchHistoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHistoryManager.swift; sourceTree = "<group>"; };
 		84EBDFD120827D140076C121 /* LocationPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPickerViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C42A5F2097FF0B00DFEEAD /* EventKit.framework in Frameworks */,
 				1C39B48EC8C5707DDC02A485 /* Pods_Make_A_Date.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +110,7 @@
 		00260CF4D72144236B27CBD6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84C42A5E2097FF0B00DFEEAD /* EventKit.framework */,
 				C917D73C0FAC20F16F5CAD74 /* Pods_Make_A_Date.framework */,
 			);
 			name = Frameworks;
@@ -209,8 +219,10 @@
 		849E5991206AC8D4000D252A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				84C42A622098036F00DFEEAD /* UserSavedItem.swift */,
 				842EDB6F2084FDB1008DCEDC /* UserInterests.swift */,
 				84EBDFDE2083C45D0076C121 /* UserProfile.swift */,
+				84C42A5C2097D6D000DFEEAD /* ResultContent.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,6 +232,7 @@
 			children = (
 				84C42A582097AE6900DFEEAD /* EventPageViewController.swift */,
 				844B4C142094EE9C008BB849 /* SearchViewController.swift */,
+				84C42A5A2097C9D400DFEEAD /* ItemViewController.swift */,
 				842EDB5E208459A4008DCEDC /* QuestionnaireViewController */,
 				84EBDFD120827D140076C121 /* LocationPickerViewController.swift */,
 				84EBDFD220827D150076C121 /* LocationSearchResultsViewController.swift */,
@@ -231,7 +244,7 @@
 		849E5993206AC8F0000D252A /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				8431DD6A208BC4000035836B /* awsconfiguration.json */,
+				84C42A602098033000DFEEAD /* awsconfiguration.json */,
 				840409AE20631CB40043973A /* LaunchScreen.storyboard */,
 				840409B120631CB40043973A /* Info.plist */,
 			);
@@ -309,8 +322,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				842EDB582084598B008DCEDC /* CustomCell.xib in Resources */,
+				84C42A612098033100DFEEAD /* awsconfiguration.json in Resources */,
 				840409B020631CB40043973A /* LaunchScreen.storyboard in Resources */,
-				8431DD6B208BC4000035836B /* awsconfiguration.json in Resources */,
 				842EDB6C208459B5008DCEDC /* UserQuestionnaire.storyboard in Resources */,
 				844B4C132094EDB9008BB849 /* Search.storyboard in Resources */,
 				840409AD20631CB40043973A /* Assets.xcassets in Resources */,
@@ -401,16 +414,19 @@
 				84596F24207BF6620012E651 /* System Extension.swift in Sources */,
 				84C42A592097AE6900DFEEAD /* EventPageViewController.swift in Sources */,
 				844B4C1C2094F019008BB849 /* Business.swift in Sources */,
+				84C42A5D2097D6D000DFEEAD /* ResultContent.swift in Sources */,
 				844B4C152094EE9C008BB849 /* SearchViewController.swift in Sources */,
 				842EDB592084598B008DCEDC /* Model.swift in Sources */,
 				844B4C1D2094F019008BB849 /* YelpClient.swift in Sources */,
 				842EDB5D2084598B008DCEDC /* ViewModel.swift in Sources */,
 				84EBDFDF2083C45D0076C121 /* UserProfile.swift in Sources */,
 				842EDB5A2084598B008DCEDC /* CustomCell.swift in Sources */,
+				84C42A5B2097C9D400DFEEAD /* ItemViewController.swift in Sources */,
 				8431DD69208A793A0035836B /* QuestionnaireInitialViewController.swift in Sources */,
 				842EDB5C2084598B008DCEDC /* ViewModel04.swift in Sources */,
 				842EDB6A208459A4008DCEDC /* SecondViewController.swift in Sources */,
 				844B4C192094F009008BB849 /* SearchResultsCell.swift in Sources */,
+				84C42A632098036F00DFEEAD /* UserSavedItem.swift in Sources */,
 				842EDB65208459A4008DCEDC /* ViewController.swift in Sources */,
 				842EDB572084598B008DCEDC /* ViewModel03.swift in Sources */,
 			);

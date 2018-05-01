@@ -106,13 +106,51 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
         genderPicker.delegate = self
         genderPicker.dataSource = self
         genderTextField.inputView = genderPicker
+        
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor.black
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ProfilePageViewController.genderDoneClick))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        toolBar.setItems([spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        genderTextField.inputAccessoryView = toolBar
     }
     func setupDatePicker(){
         let datePickerView = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.date
         datePickerView.addTarget(self, action: #selector(ProfilePageViewController.datePickerValueChanged(sender:)), for: UIControlEvents.valueChanged)
-        self.dateOfBirthTextField.inputView = datePickerView
+        dateOfBirthTextField.inputView = datePickerView
+        
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor.black
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ProfilePageViewController.DOBDoneClick))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        toolBar.setItems([spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        dateOfBirthTextField.inputAccessoryView = toolBar
+        
     }
+    
+    @objc func DOBDoneClick(sender:Any) {
+        dateOfBirthTextField.resignFirstResponder()
+    }
+//    @objc func DOBCancelClick(sender:Any) {
+//        dateOfBirthTextField.resignFirstResponder()
+//    }
+    @objc func genderDoneClick(sender:Any) {
+        genderTextField.resignFirstResponder()
+    }
+//    @objc func genderCancelClick(sender:Any) {
+//        genderTextField.resignFirstResponder()
+//    }
     
     // Make a dateFormatter in which format you would like to display the selected date in the textfield.
     @objc func datePickerValueChanged(sender:UIDatePicker) {
