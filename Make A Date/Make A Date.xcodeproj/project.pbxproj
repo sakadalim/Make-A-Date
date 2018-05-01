@@ -35,6 +35,7 @@
 		844B4C1C2094F019008BB849 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B4C1A2094F019008BB849 /* Business.swift */; };
 		844B4C1D2094F019008BB849 /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B4C1B2094F019008BB849 /* YelpClient.swift */; };
 		84596F24207BF6620012E651 /* System Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84596F23207BF6620012E651 /* System Extension.swift */; };
+		8492CD222098BEBD00A5767A /* SignUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 8492CD212098BEBD00A5767A /* SignUp.png */; };
 		84C42A592097AE6900DFEEAD /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C42A582097AE6900DFEEAD /* EventPageViewController.swift */; };
 		84C42A5B2097C9D400DFEEAD /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C42A5A2097C9D400DFEEAD /* ItemViewController.swift */; };
 		84C42A5D2097D6D000DFEEAD /* ResultContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C42A5C2097D6D000DFEEAD /* ResultContent.swift */; };
@@ -82,6 +83,7 @@
 		844B4C1A2094F019008BB849 /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		844B4C1B2094F019008BB849 /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
 		84596F23207BF6620012E651 /* System Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "System Extension.swift"; sourceTree = "<group>"; };
+		8492CD212098BEBD00A5767A /* SignUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUp.png; sourceTree = "<group>"; };
 		84C42A582097AE6900DFEEAD /* EventPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
 		84C42A5A2097C9D400DFEEAD /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		84C42A5C2097D6D000DFEEAD /* ResultContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultContent.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 		849E5993206AC8F0000D252A /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				8492CD212098BEBD00A5767A /* SignUp.png */,
 				84C42A752098353B00DFEEAD /* awsconfiguration.json */,
 				840409AE20631CB40043973A /* LaunchScreen.storyboard */,
 				840409B120631CB40043973A /* Info.plist */,
@@ -333,6 +336,7 @@
 				84C42A762098353C00DFEEAD /* awsconfiguration.json in Resources */,
 				842EDB582084598B008DCEDC /* CustomCell.xib in Resources */,
 				84C42A6E20982BE100DFEEAD /* SavedItems.storyboard in Resources */,
+				8492CD222098BEBD00A5767A /* SignUp.png in Resources */,
 				840409B020631CB40043973A /* LaunchScreen.storyboard in Resources */,
 				842EDB6C208459B5008DCEDC /* UserQuestionnaire.storyboard in Resources */,
 				844B4C132094EDB9008BB849 /* Search.storyboard in Resources */,
