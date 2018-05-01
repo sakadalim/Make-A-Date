@@ -31,19 +31,6 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Events" id="Jf9-vq-Cqg">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="KW4-4O-JDY">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UaE-dR-ejT">
-                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Reload">
-                                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="reload:" destination="oFU-uh-SUi" eventType="touchUpInside" id="0ov-vK-3gT"/>
-                                                </connections>
-                                            </button>
-                                            <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="tVk-YO-2pH">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ddu-Ss-ZcT">
                                                 <rect key="frame" x="250" y="7" width="109" height="30"/>

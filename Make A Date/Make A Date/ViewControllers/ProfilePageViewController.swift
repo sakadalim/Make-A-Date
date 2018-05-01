@@ -86,8 +86,9 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
             locationPicker.showCurrentLocationButton = true
             locationPicker.useCurrentLocationAsHint = true
             locationPicker.selectCurrentLocationInitially = true
-            
+        
             locationPicker.completion = { self.location = $0 }
+            
         }
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

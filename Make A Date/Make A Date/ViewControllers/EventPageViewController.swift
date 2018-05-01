@@ -17,20 +17,27 @@ class EventPageViewController: UIViewController, CLLocationManagerDelegate, Pass
     func rangeChanged(rangee: Float?) {
         range = rangee
     }
-    
+    func locChange(loc: String){
+        updateLoc = false
+        locationMan.stopUpdatingLocation()
+        locationStr = loc
+        print(locationStr)
+    }
+    var updateLoc = true
     var res = [ResultContent]()
     var range: Float?
     var searchTerm: String?
     var secView: SearchViewController?
-    func stringChanged(search: String?) {
-        searchTerm? = search!
+    func stringChanged(search: String) {
+        searchTerm? = search
     }
+    
     lazy var refreshControl: UIRefreshControl = {
-        
+        self.res = [ResultContent]()
         let refreshControl = UIRefreshControl()
         
         refreshControl.addTarget(self, action:
-            #selector(self.reload(_:)),
+            #selector(reload),
                                  for: UIControlEvents.allEvents)
         
         refreshControl.tintColor = UIColor.amethyst
@@ -56,15 +63,17 @@ class EventPageViewController: UIViewController, CLLocationManagerDelegate, Pass
             if let indexPath = self.eventTableView.indexPathForSelectedRow {
                 destination?.resultContent = res[indexPath.row]
             }
-                
+            
         default:
             print("unexpected segue identifier")
         }
     }
     
-    @IBAction func reload(_ sender: Any) {
-        res = [ResultContent]()
+    @objc func reload() {
+        print("RELOAD")
+        self.res = [ResultContent]()
         self.viewDidLoad()
+        refreshControl.endRefreshing()
     }
     @IBOutlet weak var eventTableView: UITableView!
     //@property (strong, nonatomic) CLLocationManager *LocationManager;
@@ -73,20 +82,22 @@ class EventPageViewController: UIViewController, CLLocationManagerDelegate, Pass
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-
+    
     @IBAction func returnTo(seque:UIStoryboardSegue){
         res = [ResultContent]()
-        self.viewDidLoad()
+        self.reload()
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        let userLocation = locations[0]
-        let long = userLocation.coordinate.longitude
-        let lat = userLocation.coordinate.latitude
-        print("\(lat),\(long)")
+        if updateLoc{
+            let userLocation = locations[0]
+            let long = userLocation.coordinate.longitude
+            let lat = userLocation.coordinate.latitude
+            print("\(lat),\(long)")
+        }
         
     }
-
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -100,8 +111,8 @@ class EventPageViewController: UIViewController, CLLocationManagerDelegate, Pass
         if searchTerm == nil{
             searchTerm = ""
         }
-
-
+        
+        
         self.eventTableView.dataSource = self
         self.eventTableView.delegate = self
         if CLLocationManager.locationServicesEnabled() {
@@ -125,13 +136,14 @@ class EventPageViewController: UIViewController, CLLocationManagerDelegate, Pass
             locationMan.startUpdatingLocation()
         }
         var loc = locationMan.location
-        if loc != nil{
+        if loc != nil && updateLoc{
             let long = loc!.coordinate.longitude
             let lat = loc!.coordinate.latitude
             locationStr = "\(lat),\(long)"
         }
         
         print(searchTerm)
+        print(locationStr)
         var rangeinmeters:Int = Int(range! * 1.60934)*1000
         Business.searchWithTerm(term: searchTerm!, coords: locationStr, range: rangeinmeters, sort: nil, categories: nil, deals: nil, completion:
             { (businesses: [Business]?, error: Error?) -> Void in
@@ -155,13 +167,12 @@ class EventPageViewController: UIViewController, CLLocationManagerDelegate, Pass
                         count+=1
                         print("Total Res: \(count)")
                         
-                        self.eventTableView.reloadData()
-                        }
+                        
                     }
+                    self.eventTableView.reloadData()
                 }
-                
+        }
         )
-        
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: false)
@@ -169,7 +180,17 @@ class EventPageViewController: UIViewController, CLLocationManagerDelegate, Pass
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toResultContent", sender: self)
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // deselect the selected row if any
+        let selectedRow: IndexPath? = eventTableView.indexPathForSelectedRow
+        if let selectedRowNotNill = selectedRow {
+            eventTableView.deselectRow(at: selectedRowNotNill, animated: true)
+        }
+    }
+    
 }
 
 extension EventPageViewController: UITableViewDataSource, UITableViewDelegate{
@@ -179,29 +200,35 @@ extension EventPageViewController: UITableViewDataSource, UITableViewDelegate{
         //return res.count
         return self.res.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 2
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchResultCell", for: indexPath) as! SearchResultCell
-        cell.locationName?.text = self.res[indexPath.row].locationName!
-        cell.locationCategory?.text = self.res[indexPath.row].locationCategory!
-        cell.locationAddress?.text = self.res[indexPath.row].locationAddress!
-        cell.distance?.text = self.res[indexPath.row].distance!
-        cell.rating?.text = "\(self.res[indexPath.row].rating!)"
-        if(self.res[indexPath.row].imageUrl) != nil{
-            cell.downloadImage(url:self.res[indexPath.row].imageUrl!)
+        print(indexPath.row)
+        if(indexPath.row<=res.count){
+            cell.locationName?.text = self.res[indexPath.row].locationName!
+            cell.locationCategory?.text = self.res[indexPath.row].locationCategory!
+            cell.locationAddress?.text = self.res[indexPath.row].locationAddress!
+            cell.distance?.text = self.res[indexPath.row].distance!
+            cell.rating?.text = "\(self.res[indexPath.row].rating!)"
+            if(self.res[indexPath.row].imageUrl) != nil{
+                cell.downloadImage(url:self.res[indexPath.row].imageUrl!)
+            }else{
+                var yourImage: UIImage = UIImage(named: "not-found")!
+                cell.locationImage.image = yourImage
+            }
+            print(self.res[indexPath.row].locationName)
+            return cell
         }else{
-            var yourImage: UIImage = UIImage(named: "not-found")!
-            cell.locationImage.image = yourImage
+            return cell
         }
         
-        print(indexPath.row)
-        print(self.res[indexPath.row].locationName)
-        return cell
+        
     }
     
     
     public func reloadData(_ completion: @escaping ()->()) {
+        res = [ResultContent]()
         UIView.animate(withDuration: 0, animations: {
             self.loadView()
         }, completion:{ _ in
@@ -209,4 +236,5 @@ extension EventPageViewController: UITableViewDataSource, UITableViewDelegate{
         })
     }
 }
+
 

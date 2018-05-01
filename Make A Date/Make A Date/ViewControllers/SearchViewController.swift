@@ -12,7 +12,8 @@ import UIKit
 
 protocol PassBackDelegate: class {
     func rangeChanged(rangee: Float?)
-    func stringChanged(search: String?)
+    func stringChanged(search: String)
+    func locChange(loc: String)
     
 }
 
@@ -29,9 +30,6 @@ class SearchViewController: UIViewController {
     var location: Location? {
         didSet {
             locationTextField.text = location.flatMap({ $0.title }) ?? ""
-            if (location != nil){
-                print("HEY  " + (location?.coordinate.latitude.description)! + ", " + (location?.coordinate.longitude.description)! )
-            }
         }
     }
     @IBAction func changeRange(_ sender: Any) {
@@ -48,17 +46,11 @@ class SearchViewController: UIViewController {
         
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        
-//        print("PREPAREBACK" + searchString.text!)
-//        print("Preparebackcheck")
-//        //mainView?.passDataBack(rangee: rangeVal!,searc: searchString.text!)
-//    }
     
 
     @IBAction func changeTerm(_ sender: Any) {
-        var term = searchString.text
-        delegate?.stringChanged(search: term)
+        let term = searchString.text
+        delegate?.stringChanged(search: term!)
         searchTerm = term
         print("CHANGE VAL" + searchString.text!)
     }
@@ -94,6 +86,18 @@ class SearchViewController: UIViewController {
             locationPicker.selectCurrentLocationInitially = true
             
             locationPicker.completion = { self.location = $0 }
+        }
+        if segue.identifier == "backToEventTable"{
+            var term = searchString.text
+            delegate?.stringChanged(search: term!)
+            rangeVal = rangeSlider.value
+            delegate?.rangeChanged(rangee: rangeVal)
+            if location != nil{
+                var lat = location?.coordinate.latitude.description
+                var lon = location?.coordinate.longitude.description
+                var locStr = lat!+","+lon!
+                delegate?.locChange(loc: locStr)
+            }
         }
     }
 }

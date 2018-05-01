@@ -384,6 +384,13 @@ extension LocationPickerViewController: MKMapViewDelegate {
             userPin.canShowCallout = false
         }
 	}
+    
+    override open func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    override open func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
 }
 
 extension LocationPickerViewController: UIGestureRecognizerDelegate {
