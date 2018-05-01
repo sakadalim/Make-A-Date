@@ -21,6 +21,7 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var nameLabel:UILabel!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -76,6 +77,9 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
             self.dateOfBirthTextField.text = (UserProfile.currentProfile?._dateOfBirth)!
             self.genderTextField.text = (UserProfile.currentProfile?._gender)!
             self.locationTextField.text = (UserProfile.currentProfile?._locationName)!
+            if let firstName = (UserProfile.currentProfile?._fullName)!.components(separatedBy: " ").first{
+                self.nameLabel.text = firstName
+            }
         }
     }
 
@@ -222,6 +226,8 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
         } else {
             UserProfile.updateUserProfile(fullName: fullNameTextField.text!, dob: dateOfBirthTextField.text!, gender: genderTextField.text!, locationName: locationTextField.text!)
         }
+        UserProfile.getUserProfile()
+        updateTextFields()
         disableEdit()
         if UserInterests.current.makeNew {
             // create the alert

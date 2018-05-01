@@ -1,5 +1,5 @@
 //
-//  UserSavedItem.swift
+//  UserSavedItems.swift
 //  MySampleApp
 //
 //
@@ -15,22 +15,23 @@ import Foundation
 import UIKit
 import AWSDynamoDB
 
-class UserSavedItem: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
+@objcMembers
+class UserSavedItems: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     
     var _userId: String?
-    var _itemId: String?
-    var _creationDate: NSNumber?
+    var _locationName: String?
     var _distance: String?
+    var _endDate: String?
     var _imageUrl: String?
     var _locationAddress: String?
     var _locationCategory: String?
-    var _locationName: String?
     var _rating: String?
+    var _startDate: String?
     var _updatedDate: NSNumber?
     
     class func dynamoDBTableName() -> String {
 
-        return "makeadate-mobilehub-1183265318-UserSavedItem"
+        return "makeadate-mobilehub-1183265318-UserSavedItems"
     }
     
     class func hashKeyAttribute() -> String {
@@ -40,20 +41,20 @@ class UserSavedItem: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     
     class func rangeKeyAttribute() -> String {
 
-        return "_itemId"
+        return "_locationName"
     }
     
     override class func jsonKeyPathsByPropertyKey() -> [AnyHashable: Any] {
         return [
                "_userId" : "userId",
-               "_itemId" : "itemId",
-               "_creationDate" : "creationDate",
+               "_locationName" : "locationName",
                "_distance" : "distance",
+               "_endDate" : "endDate",
                "_imageUrl" : "imageUrl",
                "_locationAddress" : "locationAddress",
                "_locationCategory" : "locationCategory",
-               "_locationName" : "locationName",
                "_rating" : "rating",
+               "_startDate" : "startDate",
                "_updatedDate" : "updatedDate",
         ]
     }

@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Search-->
         <scene sceneID="ssM-FF-zqF">
             <objects>
                 <viewController id="oFU-uh-SUi" customClass="EventPageViewController" customModule="Make_A_Date" customModuleProvider="target" sceneMemberID="viewController">
@@ -47,7 +47,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="107" estimatedRowHeight="-1" sectionHeaderHeight="31" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Dc-zA-VbX">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" rowHeight="107" id="ebI-XR-W5I" customClass="SearchResultCell" customModule="Make_A_Date" customModuleProvider="target">
@@ -140,7 +140,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gAA-ji-ytF"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="f3A-Se-gcY"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="search_icon" id="ROb-uO-hwr"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="eventTableView" destination="7Dc-zA-VbX" id="kRI-aQ-h3I"/>
                         <segue destination="M0u-8L-Fd5" kind="show" identifier="toResultContent" id="Fa3-c6-g0k"/>
@@ -499,5 +500,6 @@
     <resources>
         <image name="Share_Button" width="170" height="170"/>
         <image name="locationimage" width="16" height="16"/>
+        <image name="search_icon" width="26" height="26"/>
     </resources>
 </document>

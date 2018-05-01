@@ -30,7 +30,11 @@ class ItemViewController: UIViewController{
     let store = EKEventStore()
     
     @IBAction func didTapSaveButton (){
-        createEventinTheCalendar(with: resultContent.locationName!, forDate: startTimePicker.date, toDate: endTimePicker.date)
+//        createEventinTheCalendar(with: resultContent.locationName!, forDate: startTimePicker.date, toDate: endTimePicker.date)
+        SavedItemsService.insertItem(resultContent, startDate: startTimePicker.date.description, endDate: endTimePicker.date.description)
+        saveButton.backgroundColor = UIColor.gray
+        saveButton.isUserInteractionEnabled = false
+        
     }
     @IBAction func didTapShareButton(){
         
@@ -94,6 +98,7 @@ class ItemViewController: UIViewController{
     func setupEndTimePicker(){
         endTimePicker.datePickerMode = UIDatePickerMode.dateAndTime
         endTimePicker.minuteInterval = 10
+        endTimePicker.minimumDate = self.startTimePicker.date
         let toolBar = UIToolbar()
         toolBar.barStyle = .default
         toolBar.isTranslucent = true
@@ -175,5 +180,8 @@ class ItemViewController: UIViewController{
                 print("error = \(String(describing: error?.localizedDescription))")
             }
         }
+    }
+    override func  touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
 }
