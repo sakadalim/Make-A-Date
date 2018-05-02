@@ -22,6 +22,7 @@ class SavedItemsViewController: UIViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
         getSavedItems()
     }
     override func viewDidLoad() {
@@ -79,8 +80,22 @@ class SavedItemsViewController: UIViewController{
         }
     }
     
-}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard let identifier = segue.identifier else { return }
+        if identifier == "toSavedItem" {
+            let destination = segue.destination as? ItemViewController2
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                destination?.userSavedItem = arrayOfSavedItems[indexPath.row]
+            }
+        }
+    }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toSavedItem", sender: self)
+    }
+    
+}
 
 extension SavedItemsViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

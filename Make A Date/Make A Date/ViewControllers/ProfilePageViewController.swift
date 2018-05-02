@@ -177,6 +177,7 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
         config.font = UIFont (name: "Helvetica Neue", size: 15)
         config.isBackgroundColorFullScreen = false
         config.canCancel = false
+        config.logoImage = UIImage(named: "logo.png")
         AWSAuthUIViewController.presentViewController(
             with: self.navigationController!,
             configuration: config, completionHandler: { (provider: AWSSignInProvider, error: Error?) in

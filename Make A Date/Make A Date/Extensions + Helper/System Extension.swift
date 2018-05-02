@@ -34,6 +34,10 @@ extension UIColor {
     static var rose: UIColor{
         return UIColor(hex: 0xe52a6f)
     }
+    
+    static var lightJewel: UIColor{
+        return UIColor(hex: 0x8a507e)
+    }
 }
 
 extension UITextField {

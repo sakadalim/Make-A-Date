@@ -53,6 +53,23 @@ struct SavedItemsService {
             print("A Saved Item was deleted in DDB.")
         })
     }
+    func updateSavedItem(_ item: UserSavedItems)  {
+        
+        let dynamoDbObjectMapper = AWSDynamoDBObjectMapper.default()
+        
+        let newItem: UserSavedItems = item
+        newItem._updatedDate = NSDate().timeIntervalSince1970 as NSNumber
+        let updateMapperConfig = AWSDynamoDBObjectMapperConfiguration()
+        updateMapperConfig.saveBehavior = .updateSkipNullAttributes //ignore any null value attributes and does not remove in database
+        dynamoDbObjectMapper.save(newItem, configuration: updateMapperConfig, completionHandler: {(error: Error?) -> Void in
+            if let error = error {
+                print(" Amazon DynamoDB UPDATE FAILED: \(error)")
+                return
+            }
+            print("UPDATE SUCCESS.")
+        })
+    }
+
     
     
 }

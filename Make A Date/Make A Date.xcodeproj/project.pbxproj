@@ -50,6 +50,9 @@
 		84EBDFD320827D150076C121 /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBDFD120827D140076C121 /* LocationPickerViewController.swift */; };
 		84EBDFD420827D150076C121 /* LocationSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBDFD220827D150076C121 /* LocationSearchResultsViewController.swift */; };
 		84EBDFDF2083C45D0076C121 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBDFDE2083C45D0076C121 /* UserProfile.swift */; };
+		84F6BF5520992CB6003FC116 /* ItemViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F6BF5420992CB6003FC116 /* ItemViewController2.swift */; };
+		84F6BF59209949CA003FC116 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F6BF58209949CA003FC116 /* logo.png */; };
+		84F6BF5B20994AA5003FC116 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F6BF5A20994AA5003FC116 /* LoginService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +101,9 @@
 		84EBDFD120827D140076C121 /* LocationPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPickerViewController.swift; sourceTree = "<group>"; };
 		84EBDFD220827D150076C121 /* LocationSearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchResultsViewController.swift; sourceTree = "<group>"; };
 		84EBDFDE2083C45D0076C121 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		84F6BF5420992CB6003FC116 /* ItemViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController2.swift; sourceTree = "<group>"; };
+		84F6BF58209949CA003FC116 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		84F6BF5A20994AA5003FC116 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		95CD5F2FB3F5591AC56530A1 /* Pods-Make A Date.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Make A Date.release.xcconfig"; path = "Pods/Target Support Files/Pods-Make A Date/Pods-Make A Date.release.xcconfig"; sourceTree = "<group>"; };
 		C917D73C0FAC20F16F5CAD74 /* Pods_Make_A_Date.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Make_A_Date.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -247,6 +253,7 @@
 				84EBDFD220827D150076C121 /* LocationSearchResultsViewController.swift */,
 				840409A420631CB40043973A /* ProfilePageViewController.swift */,
 				84C42A6520980FA000DFEEAD /* SavedItemsViewController.swift */,
+				84F6BF5420992CB6003FC116 /* ItemViewController2.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -254,6 +261,7 @@
 		849E5993206AC8F0000D252A /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				84F6BF58209949CA003FC116 /* logo.png */,
 				8492CD212098BEBD00A5767A /* SignUp.png */,
 				84C42A752098353B00DFEEAD /* awsconfiguration.json */,
 				840409AE20631CB40043973A /* LaunchScreen.storyboard */,
@@ -268,6 +276,7 @@
 				844B4C1A2094F019008BB849 /* Business.swift */,
 				844B4C1B2094F019008BB849 /* YelpClient.swift */,
 				84C42A67209812B300DFEEAD /* SavedItemsService.swift */,
+				84F6BF5A20994AA5003FC116 /* LoginService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -339,6 +348,7 @@
 				8492CD222098BEBD00A5767A /* SignUp.png in Resources */,
 				840409B020631CB40043973A /* LaunchScreen.storyboard in Resources */,
 				842EDB6C208459B5008DCEDC /* UserQuestionnaire.storyboard in Resources */,
+				84F6BF59209949CA003FC116 /* logo.png in Resources */,
 				844B4C132094EDB9008BB849 /* Search.storyboard in Resources */,
 				840409AD20631CB40043973A /* Assets.xcassets in Resources */,
 				840409A820631CB40043973A /* Main.storyboard in Resources */,
@@ -426,9 +436,11 @@
 				84EBDFCF20827CEB0076C121 /* Location.swift in Sources */,
 				84EBDFD420827D150076C121 /* LocationSearchResultsViewController.swift in Sources */,
 				840409A320631CB40043973A /* AppDelegate.swift in Sources */,
+				84F6BF5520992CB6003FC116 /* ItemViewController2.swift in Sources */,
 				84EBDFD020827CEB0076C121 /* SearchHistoryManager.swift in Sources */,
 				84596F24207BF6620012E651 /* System Extension.swift in Sources */,
 				84C42A592097AE6900DFEEAD /* EventPageViewController.swift in Sources */,
+				84F6BF5B20994AA5003FC116 /* LoginService.swift in Sources */,
 				844B4C1C2094F019008BB849 /* Business.swift in Sources */,
 				84C42A5D2097D6D000DFEEAD /* ResultContent.swift in Sources */,
 				844B4C152094EE9C008BB849 /* SearchViewController.swift in Sources */,
