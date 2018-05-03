@@ -34,7 +34,6 @@ class ItemViewController2: UIViewController {
     
     
     @IBAction func didTapSaveButton (){
-        //        createEventinTheCalendar(with: resultContent.locationName!, forDate: startTimePicker.date, toDate: endTimePicker.date)
         var resultContent = ResultContent()
         resultContent.distance = userSavedItem._distance
         resultContent.imageUrl = URL(string: userSavedItem._imageUrl!)
@@ -43,6 +42,7 @@ class ItemViewController2: UIViewController {
         resultContent.locationName = userSavedItem._locationName
         resultContent.rating = userSavedItem._rating
         
+        createEventinTheCalendar(with: resultContent.locationName!, forDate: startTimePicker.date, toDate: endTimePicker.date)
         SavedItemsService.insertItem(resultContent, startDate: startTimePicker.date.description, endDate: endTimePicker.date.description)
         saveButton.backgroundColor = UIColor.gray
         saveButton.isUserInteractionEnabled = false
@@ -51,7 +51,10 @@ class ItemViewController2: UIViewController {
     @IBAction func didTapShareButton(){
         
         // set up activity view controller
-        let textToShare = [ "Check out this place!", userSavedItem._locationName ]
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "M/d/yy hh:mm a"
+        let date = dateFormatter.string(from: startTimePicker.date)
+        let textToShare = ["Come join me to " + userSavedItem._locationName! + " at " + date]
         let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
         

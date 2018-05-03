@@ -22,6 +22,7 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var nameLabel:UILabel!
+    @IBOutlet weak var helloLabel: UILabel!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -33,8 +34,9 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
             locationTextField.text = location.flatMap({ $0.title }) ?? ""
         }
     }
+    var currentProfile: UserProfile!
+    
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
         if !AWSSignInManager.sharedInstance().isLoggedIn {
             presentAuthUIViewController()
         }
@@ -47,15 +49,13 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
         setupDatePicker()
         setupGenderPicker()
         disableEdit()
-        NotificationCenter.default.addObserver(self, selector: #selector(getDataUpdate), name: NSNotification.Name(rawValue: userProfileDidUpdateNotification), object: nil)
-        
-        
+        clearTextField()
+        getUserProfile()
     }
     
-    @objc private func getDataUpdate() {
-        if UserProfile.currentProfile == nil {
+    func getDataUpdate() {
+        if currentProfile == nil {
             let alert = UIAlertController(title: "Update Profile", message:"Please update your profile.", preferredStyle: UIAlertControllerStyle.alert)
-            
             let continueButton = UIAlertAction(title: "Continue", style: .default){ _ in
                 self.enableEdit()
             }
@@ -72,12 +72,13 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     func updateTextFields(){
-        if UserProfile.currentProfile != nil {
-            self.fullNameTextField.text = (UserProfile.currentProfile?._fullName)!
-            self.dateOfBirthTextField.text = (UserProfile.currentProfile?._dateOfBirth)!
-            self.genderTextField.text = (UserProfile.currentProfile?._gender)!
-            self.locationTextField.text = (UserProfile.currentProfile?._locationName)!
-            if let firstName = (UserProfile.currentProfile?._fullName)!.components(separatedBy: " ").first{
+        if currentProfile != nil {
+            self.fullNameTextField.text = (currentProfile?._fullName)!
+            self.dateOfBirthTextField.text = (currentProfile?._dateOfBirth)!
+            self.genderTextField.text = (currentProfile?._gender)!
+            self.locationTextField.text = (currentProfile?._locationName)!
+            if let firstName = (currentProfile?._fullName)!.components(separatedBy: " ").first{
+                self.helloLabel.text = "Hello, "
                 self.nameLabel.text = firstName
             }
         }
@@ -147,19 +148,14 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @objc func DOBDoneClick(sender:Any) {
         dateOfBirthTextField.resignFirstResponder()
     }
-//    @objc func DOBCancelClick(sender:Any) {
-//        dateOfBirthTextField.resignFirstResponder()
-//    }
+
     @objc func genderDoneClick(sender:Any) {
         genderTextField.resignFirstResponder()
     }
-//    @objc func genderCancelClick(sender:Any) {
-//        genderTextField.resignFirstResponder()
-//    }
+
     
     // Make a dateFormatter in which format you would like to display the selected date in the textfield.
     @objc func datePickerValueChanged(sender:UIDatePicker) {
-        
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.medium
         dateFormatter.timeStyle = DateFormatter.Style.none
@@ -209,6 +205,8 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
         dateOfBirthTextField.text = ""
         genderTextField.text = ""
         locationTextField.text = ""
+        nameLabel.text = ""
+        helloLabel.text = "Hello"
         print("TEXT FIELD CLEARED")
     }
     @IBAction func didTapDoneButton(_ sender: Any) {
@@ -222,12 +220,12 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
             self.present(alertController, animated: true, completion: nil)
             return
         }
-        if UserProfile.currentProfile == nil {
+        if currentProfile == nil {
             UserProfile.createNewUserProfile(fullName: fullNameTextField.text!, dob: dateOfBirthTextField.text!, gender: genderTextField.text!, locationName: locationTextField.text!)
         } else {
             UserProfile.updateUserProfile(fullName: fullNameTextField.text!, dob: dateOfBirthTextField.text!, gender: genderTextField.text!, locationName: locationTextField.text!)
         }
-        UserProfile.getUserProfile()
+        getUserProfile()
         updateTextFields()
         disableEdit()
         if UserInterests.current.makeNew {
@@ -259,7 +257,7 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
                     self.presentAuthUIViewController()
                     self.clearTextField()
                 })
-                UserProfile.currentProfile = nil
+                self.currentProfile = nil
             } else {
                 assert(false)
             }
@@ -286,8 +284,25 @@ class ProfilePageViewController: UIViewController, UIPickerViewDelegate, UIPicke
         present(alertController, animated: true)
     }
     
-    deinit {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: userProfileDidUpdateNotification), object: self)
+    func getUserProfile(){
+        let dynamoDbObjectMapper = AWSDynamoDBObjectMapper.default()
+        dynamoDbObjectMapper.load(UserProfile.self, hashKey: AWSIdentityManager.default().identityId as Any, rangeKey:nil).continueWith { (task: AWSTask<AnyObject>!) -> Any? in
+            if let error = task.error as NSError? {
+                print("The request failed. Error: \(error)", task)
+            } else if let  gotProfile = task.result as? UserProfile {
+                
+                print("Got User Profile 2")
+                self.currentProfile = gotProfile
+                DispatchQueue.main.async {
+                    self.updateTextFields()
+                }
+                return nil
+            }
+            print("USER NOT IN DB")
+            self.currentProfile = nil
+            self.getDataUpdate()
+            return nil
+        }
     }
 
 }

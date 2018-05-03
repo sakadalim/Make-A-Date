@@ -77,6 +77,7 @@ class UserInterests: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
                 return
             }
             print("New Interests successfully saved to DDB")
+            UserInterests._current = interest
         })
     }
     
@@ -115,6 +116,7 @@ class UserInterests: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
                 return
             }
             print("User Interests successfully updated!")
+            UserInterests._current = interest
         })
     }
     

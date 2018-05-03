@@ -30,8 +30,6 @@ class UserProfile: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     var _locationName: String?
     var _updatedDate: NSNumber?
     
-    static var currentProfile: UserProfile?
-    
     class func dynamoDBTableName() -> String {
 
         return "makeadate-mobilehub-1183265318-UserProfile"
@@ -74,26 +72,6 @@ class UserProfile: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
             print("New UserProfile successfully saved to DDB")
         })
         
-    }
-    
-    class func getUserProfile(){
-        let dynamoDbObjectMapper = AWSDynamoDBObjectMapper.default()
-        dynamoDbObjectMapper.load(UserProfile.self, hashKey: AWSIdentityManager.default().identityId as Any, rangeKey:nil).continueWith { (task: AWSTask<AnyObject>!) -> Any? in
-            if let error = task.error as NSError? {
-                print("The request failed. Error: \(error)", task)
-            } else if let  gotProfile = task.result as? UserProfile {
-                
-                print("Got User Profile 2")
-                UserProfile.currentProfile = gotProfile
-                NotificationCenter.default.post(name:
-                    NSNotification.Name(rawValue: userProfileDidUpdateNotification), object: nil)
-                return nil
-            }
-            print("USER NOT IN DB")
-            NotificationCenter.default.post(name:
-                NSNotification.Name(rawValue: userProfileDidUpdateNotification), object: nil)
-            return nil
-        }
     }
     
     class func updateUserProfile(fullName: String, dob: String, gender: String, locationName: String){

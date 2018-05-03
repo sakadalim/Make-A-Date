@@ -30,7 +30,7 @@ class ItemViewController: UIViewController{
     let store = EKEventStore()
     
     @IBAction func didTapSaveButton (){
-//        createEventinTheCalendar(with: resultContent.locationName!, forDate: startTimePicker.date, toDate: endTimePicker.date)
+        createEventinTheCalendar(with: resultContent.locationName!, forDate: startTimePicker.date, toDate: endTimePicker.date)
         SavedItemsService.insertItem(resultContent, startDate: startTimePicker.date.description, endDate: endTimePicker.date.description)
         saveButton.backgroundColor = UIColor.gray
         saveButton.isUserInteractionEnabled = false
@@ -39,7 +39,10 @@ class ItemViewController: UIViewController{
     @IBAction func didTapShareButton(){
         
         // set up activity view controller
-        let textToShare = [ "Check out ", resultContent.locationName ]
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "M/d/yy hh:mm a"
+        let date = dateFormatter.string(from: startTimePicker.date)
+        let textToShare = ["Come join me to " + resultContent.locationName! + " at " + date]
         let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
         

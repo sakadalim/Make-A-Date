@@ -235,6 +235,7 @@
                         <outlet property="doneButton" destination="MXA-ml-bAa" id="TWj-CI-bIM"/>
                         <outlet property="fullNameTextField" destination="pnR-U6-Qma" id="Ru5-j0-aCU"/>
                         <outlet property="genderTextField" destination="tyt-pk-p1P" id="oey-Eh-09b"/>
+                        <outlet property="helloLabel" destination="BbI-mz-gD0" id="CEo-W3-pMo"/>
                         <outlet property="locationTextField" destination="tAM-9I-ddc" id="sUV-Bp-ybN"/>
                         <outlet property="nameLabel" destination="Mv9-Go-QlQ" id="EzG-0n-5C1"/>
                         <segue destination="JEh-wp-bLI" kind="show" identifier="toLocationPicker" id="JJY-VO-mgU"/>
@@ -274,7 +275,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qio-4Z-NPA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2299" y="150"/>
+            <point key="canvasLocation" x="-2545" y="150"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="b4F-le-87l">
